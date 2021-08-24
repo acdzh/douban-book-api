@@ -5,7 +5,7 @@ const parseHTML = require('./libs/parseHtml');
 const fs = require('fs');
 const path = require('path');
 
-const CACHE_DIR = process.env.CACHE_DIR || './cache';
+const CACHE_DIR = process.env.CACHE_DIR || './.cache';
 
 try {
   fs.mkdirSync(path.join(CACHE_DIR, 'html', 'id'), { recursive: true });
