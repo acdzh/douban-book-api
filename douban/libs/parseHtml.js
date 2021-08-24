@@ -19,6 +19,18 @@ function toArray(obj) {
   }
 }
 
+function getLinkingData($) {
+  const cheeioScriptJsonLinkingDataEleText = $('head>script[type="application/ld+json"]')[0]?.children[0]?.data || '{}';
+  try {
+    const linkingData = JSON.parse(cheeioScriptJsonLinkingDataEleText);
+    const author = linkingData.author.map(item => item.name);
+    const { name: title, url, isbn } = linkingData;
+    return { title, url, isbn, author };
+  } catch {
+    return {};
+  }
+}
+
 function getId($) {
   return $('div#interest_sect_level.clearfix>a')[0].attribs.name.split('-')[1]
 }
@@ -33,7 +45,6 @@ function getInfo($) {
   const spanEles = [...infoEle.children('span')]
   spanEles.forEach(spanEle => {
     if (spanEle.children.length === 1) {
-      // console.log(`a${spanEle.next.data.remove(' ')}l`, spanEle.next.data.remove(' ') === '\n')
       info[spanEle.children[0].data.remove(':', ' ')]
         = spanEle.next.data.slice(0, 2) === ' \n' ? spanEle.next.next.data : spanEle.next.data.slice(1);
     } else {
@@ -181,18 +192,18 @@ function getNotes($) {
 function parseHTML(html, id) {
   const $ = cheerio.load(html);
   const info = getInfo($);
+  const linkingData = getLinkingData($);
 
   if (!id) {
     id = getId($);
   }
-
   return {
     title: getTitle($),
     subtitle: info.副标题 || '',
     original_title: info.原作名 || '',
     id,
-    isbn: info.ISBN,
-    author: toArray(info.作者) || [],
+    isbn: linkingData.isbn || info.ISBN || '',
+    author: linkingData.author || [],
     translator: toArray(info.译者) || [],
     publish: info.出版社 || [],
     producer: info.出品方 || '',
