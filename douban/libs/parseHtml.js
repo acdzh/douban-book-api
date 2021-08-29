@@ -57,7 +57,7 @@ function getInfo($) {
 }
 
 function getBookIntro($) {
-  return $('div.intro')[0]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0].data).join('\n') || '';
+  return $('div.intro')[0]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0]?.data || '').filter(data => data !== '').join('\n') || '';
 }
 
 function getAuthorIntro($) {
@@ -229,8 +229,8 @@ function parseHTML(html, id) {
 module.exports = parseHTML;
 
 if (require.main === module) {
-  const html = require('fs').readFileSync('.cache/html/id/1102870.html', { encoding: 'utf8' });
+  const html = require('fs').readFileSync('.cache/html/id/26807576.html', { encoding: 'utf8' });
   const result = parseHTML(html)
   // require('fs').writeFileSync(`./.cache/result-3221090.json`, JSON.stringify(result, null, 2));
-  console.log(result.author);
+  console.log(result.book_intro);
 }

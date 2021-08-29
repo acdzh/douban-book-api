@@ -626,6 +626,12 @@ node app.js
 
 默认会先从缓存中查询, 如果需要最新数据可以指定 api 参数 `update=1`.
 
+## 油猴脚本
+
+[自动刷新豆瓣图书 api 缓存 @Greasy Fork](https://greasyfork.org/zh-CN/scripts/431582)
+
+这个脚本可以在浏览豆瓣时自动提交图书信息. 第一次使用需要先设置 api 服务器地址.
+
 ## 其他
 
 本项目最终目的是为 [Calibre](https://calibre-ebook.com/) 插件所服务, 对应插件仍在开发中, 因此除非 Calibre 所需, 不会增加新功能.

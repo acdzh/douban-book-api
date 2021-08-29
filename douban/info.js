@@ -1,5 +1,5 @@
 const got =require('got');
-const headers = require('./libs/headers');
+const headers = require('./libs/getHeaders')();
 const parseHTML = require('./libs/parseHtml');
 
 const fs = require('fs');
@@ -12,22 +12,26 @@ try {
   fs.mkdirSync(path.join(CACHE_DIR, 'html', 'isbn'), { recursive: true });
 } catch(err) {}
 
+async function getBookInfoByHtml(html, id) {
+  if(id) {
+    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'id', `${id}.html`), html);
+  }
+  const result = parseHTML(html, id);
+  if(!id && result.id) {
+    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'id', `${result.id}.html`), html);
+  }
+  if(result.isbn) {
+    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'isbn', `${result.isbn}.html`), html);
+  }
+  return result;
+}
+
 async function getBookInfoByUrl(url, id) {
   const response = await got(url, {
     method: 'GET',
     headers,
   });
-  if(id) {
-    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'id', `${id}.html`), response.body);
-  }
-  const result = parseHTML(response.body, id);
-  if(!id && result.id) {
-    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'id', `${result.id}.html`), response.body);
-  }
-  if(result.isbn) {
-    fs.writeFileSync(path.join(CACHE_DIR, 'html', 'isbn', `${result.isbn}.html`), response.body);
-  }
-  return result;
+  return getBookInfoByHtml(response.body, id);
 };
 
 async function getBookInfoById(id) {
@@ -39,6 +43,7 @@ async function getBookInfoByIsbn(isbn) {
 }
 
 module.exports = {
+  getBookInfoByHtml,
   getBookInfoByIsbn,
   getBookInfoById,
   getBookInfoByUrl

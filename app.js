@@ -11,10 +11,13 @@ try{
 
 
 const Koa = require('koa');
-const Router = require('koa-router');
+const Router = require('@koa/router');
+const cors = require('@koa/cors');
+const bodyParser = require('koa-bodyparser');
+const logger = require('koa-logger');
 
-const search = require('./douban/search');
-const { getBookInfoById, getBookInfoByIsbn } = require('./douban/info');
+const { searchByDATA, searchByText } = require('./douban/search');
+const { getBookInfoByHtml, getBookInfoById, getBookInfoByIsbn } = require('./douban/info');
 
 const app = new Koa();
 const router = new Router();
@@ -28,7 +31,7 @@ router.get('/search/:text', async (ctx, next) => {
     if(ctx.query.update === '1' || !fs.existsSync(
       path.join(CACHE_DIR, 'search', `${ctx.params.text}.json`)
     )) {
-      const result = await search(ctx.params.text);
+      const result = await searchByText(ctx.params.text);
       ctx.body = {
         success: true,
         data: result,
@@ -61,6 +64,30 @@ router.get('/search/:text', async (ctx, next) => {
     }
   }
 });
+
+// for tamper-monkey
+router.post('/search/:text', async (ctx, next) => {
+  try {
+    const { DATA } = ctx.request.body;
+    const result = await searchByDATA(DATA);
+    ctx.body = {
+      success: true,
+      data: result,
+      is_cache: false
+    };
+    fs.writeFileSync(
+      path.join(CACHE_DIR, 'search', `${ctx.params.text}.json`),
+      JSON.stringify(result),
+      { encoding: 'utf8' }
+    );
+  } catch (err) {
+    throw err;
+    ctx.body = {
+      success: false,
+      message: err
+    }
+  }
+})
 
 router.get('/id/:id', async (ctx, next) => {
   try{
@@ -96,6 +123,37 @@ router.get('/id/:id', async (ctx, next) => {
         data: result,
         is_cache: true
       };
+    }
+  } catch (err) {
+    throw err;
+    ctx.body = {
+      success: false,
+      message: err
+    }
+  }
+});
+
+// for tamper-monkey
+router.post('/id/:id', async (ctx, next) => {
+  try{
+    const { html } = ctx.request.body;
+    const result = await getBookInfoByHtml(html, ctx.params.id);
+    ctx.body = {
+      success: true,
+      data: result,
+      is_cache: false
+    };
+    fs.writeFileSync(
+      path.join(CACHE_DIR, 'info', 'id', `${ctx.params.id}.json`),
+      JSON.stringify(result),
+      { encoding: 'utf8' }
+    );
+    if(result.isbn) {
+      fs.writeFileSync(
+        path.join(CACHE_DIR, 'info', 'isbn', `${result.isbn}.txt`),
+        ctx.params.id,
+        { encoding: 'utf8' }
+      );
     }
   } catch (err) {
     throw err;
@@ -142,8 +200,11 @@ router.get('/isbn/:isbn', async (ctx, next) => {
 });
 
 app
-  .use(router.routes())
-  .use(router.allowedMethods());
+  .use(cors())
+  .use(logger())
+  .use(bodyParser())
+  .use(router.allowedMethods())
+  .use(router.routes());
 
 console.log('http://localhost:3000');
 app.listen(3000);
