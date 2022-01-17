@@ -6,7 +6,7 @@ Resolutely oppose the ecological closure behavior led by Douban!
 
 ## 简介
 
-这是一个使用爬虫实现的第三方豆瓣读书 api 接口. 本项目中没有任何数据, 请自行搭建. 鉴于豆瓣关闭 api 接口并封禁 apiKey, 爬虫又被风控的风险, 请控制好抓取频次.
+这是一个使用爬虫实现的第三方豆瓣读书 api 接口. 本项目中没有任何数据, 请自行搭建. 鉴于豆瓣关闭 api 接口并封禁 apiKey, 爬虫有被风控的风险, 请控制好抓取频次.
 
 ## 安装
 
