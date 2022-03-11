@@ -61,7 +61,7 @@ function getBookIntro($) {
 }
 
 function getAuthorIntro($) {
-  return $('div.intro')[1]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0].data).join('\n') || '';
+  return $('div.intro')[1]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0]?.data || '').join('\n') || '';
 }
 
 function getCatalog($, id) {
