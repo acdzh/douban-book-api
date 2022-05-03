@@ -8,6 +8,12 @@ Resolutely oppose the ecological closure behavior led by Douban!
 
 这是一个使用爬虫实现的第三方豆瓣读书 api 接口. 本项目中没有任何数据, 请自行搭建. 鉴于豆瓣关闭 api 接口并封禁 apiKey, 爬虫有被风控的风险, 请控制好抓取频次.
 
+## Demo
+
+[https://acdzh-douban-book-api.herokuapp.com/](https://acdzh-douban-book-api.herokuapp.com/)
+
+服务部署在 Heroku, 访问量较大可能会被屏蔽, 请不要在正式环境使用该地址的服务.
+
 ## 安装
 
 ### 一键部署
@@ -57,7 +63,7 @@ npm start
 
 #### 返回示例
 
-`{HOST}/search/刘慈欣`
+`[{HOST}/search/刘慈欣`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/search/刘慈欣)
 
 ```json
 {
@@ -206,7 +212,7 @@ npm start
 
 #### 返回示例
 
-`{HOST}/id/27012117`
+`{HOST}/id/27012117`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/id/27012117)
 
 ```json
 {
@@ -525,7 +531,8 @@ npm start
 
 #### 返回示例
 
-`{HOST}/isbn/9787208140400`
+`{HOST}/isbn/9787208140400`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/isbn/9787208140400)
+
 
 返回同 `根据豆瓣 id 获取图书详情` 的示例
 
