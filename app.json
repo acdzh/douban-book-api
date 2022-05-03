@@ -1,0 +1,13 @@
+{
+	"name": "Douban Book Api for Calibre",
+	"description": "Douban Book Api for Calibre",
+	"repository": "https://github.com/acdzh/douban-book-api",
+	"keywords": ["douban", "book", "api", "calibre"],
+	"env": {
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/nodejs"
+		}
+	]
+}

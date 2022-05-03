@@ -19,11 +19,13 @@ const logger = require('koa-logger');
 const { searchByDATA, searchByText } = require('./douban/search');
 const { getBookInfoByHtml, getBookInfoById, getBookInfoByIsbn } = require('./douban/info');
 
+const PORT = process.env.PORT || 3000;
+
 const app = new Koa();
 const router = new Router();
 
 router.get('/', (ctx, next) => {
-  ctx.body = 'hello';
+  ctx.body = 'hello. please view the api doc at https://github.com/acdzh/douban-book-api.';
 });
 
 router.get('/search/:text', async (ctx, next) => {
@@ -206,5 +208,5 @@ app
   .use(router.allowedMethods())
   .use(router.routes());
 
-console.log('http://localhost:3000');
-app.listen(3000);
+
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

@@ -10,6 +10,12 @@ Resolutely oppose the ecological closure behavior led by Douban!
 
 ## 安装
 
+### 一键部署
+
+**请注意: 一键部署使用 Heroku 环境, 项目不对任何在第三方平台行为造成的后果负责**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Using Docker
 
 ```bash
@@ -24,7 +30,7 @@ acdzh/douban-book-api-1
 
 ```bash
 npm install
-node app.js
+npm start
 ```
 
 之后访问 `http://localhost:3000/` 即可.

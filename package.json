@@ -1,8 +1,12 @@
 {
-  "name": "douban-book",
+  "name": "douban-book-api",
   "version": "1.1.0",
   "main": "app.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.1.1",
@@ -13,5 +17,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
