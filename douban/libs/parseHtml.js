@@ -46,7 +46,7 @@ function getInfo($) {
   spanEles.forEach(spanEle => {
     if (spanEle.children.length === 1) {
       info[spanEle.children[0].data.remove(':', ' ')]
-        = spanEle.next.data.slice(0, 2) === ' \n' ? spanEle.next.next.data : spanEle.next.data.slice(1);
+        = spanEle.next.next.name === 'a' ? $(spanEle.next.next).text() : spanEle.next.data.slice(1);
     } else {
       const children = spanEle.children.filter(ele => ele.name === 'span' || ele.name === 'a');
       info[children[0].children[0].data.remove(' ')] = children.slice(1).map(aEle => aEle.children[0].data)
