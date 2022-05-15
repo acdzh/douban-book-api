@@ -639,6 +639,10 @@ npm start
 
 默认会先从缓存中查询, 如果需要最新数据可以指定 api 参数 `update=1`.
 
+## Calibre 插件
+
+打包 `calibre` 目录为 zip, 拖入 Calibre 安装即可. 注意需要在设置里更改为自己的 api 地址.
+
 ## 油猴脚本
 
 [自动刷新豆瓣图书 api 缓存 @Greasy Fork](https://greasyfork.org/zh-CN/scripts/431582)
@@ -646,7 +650,5 @@ npm start
 这个脚本可以在浏览豆瓣时自动提交图书信息. 第一次使用需要先设置 api 服务器地址.
 
 ## 其他
-
-本项目最终目的是为 [Calibre](https://calibre-ebook.com/) 插件所服务, 对应插件仍在开发中, 因此除非 Calibre 所需, 不会增加新功能.
 
 因为是通过抓取 html 页面来获取数据, 因此抓取较慢且有一定概率遭到反爬测率限制或数据解析失败. 如果解析规则失效或解析数据有误, 请提 issure 或 pr, 谢谢茄子🍆.
