@@ -131,13 +131,13 @@ function getComments($) {
     comment.user_page = commentUserAEle.attribs.href;
 
     const commentUserStarsSpanELe = commentInfoELe.children[3];
-    comment.rating = {'力荐': 5, '推荐': 4, '还行': 3, '较差': 2, '很差': 1}[commentUserStarsSpanELe.attribs.title];
+    comment.rating = { 力荐: 5, 推荐: 4, 还行: 3, 较差: 2, 很差: 1 }[commentUserStarsSpanELe.attribs.title];
 
     const commentTimeSpanEle = commentInfoELe.children[5];
     comment.date = commentTimeSpanEle?.children[0].data || '';
 
     const commentContentSpanEle = cheerioCommentEle.find('p.comment-content>span.short')[0];
-    comment.content = commentContentSpanEle.children[0].data;
+    comment.content = $(commentContentSpanEle).text();
     return comment;
   });
 }
@@ -157,7 +157,7 @@ function getReviews($) {
     review.user_page = nameAEle.attribs.href;
 
     const ratingSpanEle = cheerioMainHdHeaderEle.children('span.main-title-rating')[0];
-    ratingSpanEle && (review.rating = {'力荐': 5, '推荐': 4, '还行': 3, '较差': 2, '很差': 1}[ratingSpanEle.attribs.title] || 0);
+    ratingSpanEle && (review.rating = {力荐: 5, 推荐: 4, 还行: 3, 较差: 2, 很差: 1}[ratingSpanEle.attribs.title] || 0);
 
     const mainMetaSpanEle = cheerioMainHdHeaderEle.children('span.main-meta')[0];
     review.time = mainMetaSpanEle?.children[0].data || '';

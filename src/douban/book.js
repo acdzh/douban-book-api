@@ -1,4 +1,4 @@
-const got =require('got');
+const got = require('got');
 const headers = require('./libs/getHeaders')();
 const parseHTML = require('./libs/parseHtml');
 
