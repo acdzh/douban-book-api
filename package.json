@@ -4,8 +4,8 @@
   "main": "src/app.js",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "build:calibre": "node ./calibre/build.js",
     "lint": "eslint --ext .js,.jsx src"
   },
