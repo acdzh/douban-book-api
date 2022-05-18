@@ -22,43 +22,43 @@
 
 // This Userscirpt can't run under Greasemonkey 4.x platform
 if (typeof GM_xmlhttpRequest === 'undefined') {
-  alert('不支持Greasemonkey 4.x，请换用暴力猴或Tampermonkey');
+  alert('不支持Greasemonkey 4.x, 请换用暴力猴或Tampermonkey');
   return;
 }
 
 const getJSON = (url, callback) => {
   GM_xmlhttpRequest({
-      method: 'GET',
-      url: url,
-      headers: {
-          'Accept': 'application/json'
-      },
-      onload: function (response) {
-          if (response.status >= 200 && response.status < 400) {
-              callback(JSON.parse(response.responseText), url);
-          } else {
-              callback(false, url);
-          }
+    method: 'GET',
+    url: url,
+    headers: {
+      'Accept': 'application/json'
+    },
+    onload: function (response) {
+      if (response.status >= 200 && response.status < 400) {
+        callback(JSON.parse(response.responseText), url);
+      } else {
+        callback(false, url);
       }
+    }
   });
 };
 
 const postJSON = (url, data, callback) => {
   GM_xmlhttpRequest({
-      method: 'POST',
-      url: url,
-      data: JSON.stringify(data),
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      onload: function (response) {
-          if (response.status >= 200 && response.status < 400) {
-              callback(JSON.parse(response.responseText), url);
-          } else {
-              callback(false, url);
-          }
+    method: 'POST',
+    url: url,
+    data: JSON.stringify(data),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    onload: function (response) {
+      if (response.status >= 200 && response.status < 400) {
+        callback(JSON.parse(response.responseText), url);
+      } else {
+        callback(false, url);
       }
+    }
   });
 };
 
@@ -69,7 +69,7 @@ const getJSONSync = (url) => new Promise((resolve, reject) => {
     } else {
       resolve(res);
     }
-  })
+  });
 });
 
 const postJSONSync = (url, data) => new Promise((resolve, reject) => {
@@ -79,7 +79,7 @@ const postJSONSync = (url, data) => new Promise((resolve, reject) => {
     } else {
       resolve(res);
     }
-  })
+  });
 });
 
 const postPageData = () => {
@@ -87,24 +87,24 @@ const postPageData = () => {
     const id = location.href.match(/(\d{7,8})/g);
 
     fetch(location.href).then(r => r.text()).then(html => {
-      postJSONSync(`${origin}/id/${id}`, {
+      postJSONSync(`${origin}/book`, {
         html
       }).then(console.log, console.log);
-    })
+    });
 
   } else if (location.href.match(/douban.com\/book\/subject_search/)) {
     const searchText = new URLSearchParams(location.search).get('search_text');
     if (searchText && searchText !== '') {
-      postJSONSync(`${origin}/search/${searchText}`, {
+      postJSONSync(`${origin}/search?text=${searchText}`, {
         DATA: unsafeWindow.__DATA__
       }).then(console.log, console.log);
     }
   }
-}
+};
 
 if (typeof GM_registerMenuCommand !== 'undefined') {
   const changeDomain = () => {
-    const domain = prompt(`api server`, GM_getValue('domain', ''));
+    const domain = prompt('api server', GM_getValue('domain', ''));
     if (domain != null && domain !== '') {
       try {
         const origin = new URL(domain).origin;
@@ -113,7 +113,7 @@ if (typeof GM_registerMenuCommand !== 'undefined') {
         alert('解析输入出错');
       }
     }
-  }
+  };
 
   GM_registerMenuCommand('切换 domain', changeDomain);
   GM_registerMenuCommand('发送数据', postPageData);
