@@ -1,12 +1,12 @@
 module.exports = {
   env: {
-    'commonjs': true,
-    'es2021': true,
-    'node': true
+    commonjs: true,
+    es2021: true,
+    node: true
   },
   extends: ['eslint:recommended'],
   parserOptions: {
-    'ecmaVersion': 'latest'
+    ecmaVersion: 'latest'
   },
   rules: {
     indent: [
@@ -24,6 +24,10 @@ module.exports = {
     semi: [
       'error',
       'always'
+    ],
+    'quote-props': [
+      'error',
+      'as-needed'
     ]
   }
 };
