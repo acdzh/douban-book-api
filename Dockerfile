@@ -6,10 +6,9 @@ WORKDIR /data/app
 VOLUME /cache
 ENV CACHE_DIR /cache
 
-COPY package.json ./
+COPY . .
 RUN npm install
 
-COPY . .
 EXPOSE 3000
 
-CMD ["node", "app.js"]
+CMD ["node", "src/app.js"]

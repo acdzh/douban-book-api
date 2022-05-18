@@ -6,7 +6,7 @@ String.prototype.remove = function(...strs) {
     _this = _this.replace(new RegExp(str, 'g'), '');
   });
   return _this;
-}
+};
 
 function toArray(obj) {
   if (typeof obj === 'undefined') {
@@ -32,24 +32,24 @@ function getLinkingData($) {
 }
 
 function getId($) {
-  return $('div#interest_sect_level.clearfix>a')[0].attribs.name.split('-')[1]
+  return $('div#interest_sect_level.clearfix>a')[0].attribs.name.split('-')[1];
 }
 
 function getTitle($) {
-  return $('h1>span').text()
+  return $('h1>span').text();
 }
 
 function getInfo($) {
   const info = {};
-  const infoEle = $('#info')
-  const spanEles = [...infoEle.children('span')]
+  const infoEle = $('#info');
+  const spanEles = [...infoEle.children('span')];
   spanEles.forEach(spanEle => {
     if (spanEle.children.length === 1) {
       info[spanEle.children[0].data.remove(':', ' ')]
         = spanEle.next.next.name === 'a' ? $(spanEle.next.next).text() : spanEle.next.data.slice(1);
     } else {
       const children = spanEle.children.filter(ele => ele.name === 'span' || ele.name === 'a');
-      info[children[0].children[0].data.remove(' ')] = children.slice(1).map(aEle => aEle.children[0].data)
+      info[children[0].children[0].data.remove(' ')] = children.slice(1).map(aEle => aEle.children[0].data);
     }
   });
 
@@ -72,15 +72,15 @@ function getCatalog($, id) {
 }
 
 function getOriginalTexts($) {
-  return [...$('ul.blockquote-list>li>figure')].map(figureEle => figureEle.children[0].data.remove('\n            ').slice(0, -1))
+  return [...$('ul.blockquote-list>li>figure')].map(figureEle => figureEle.children[0].data.remove('\n            ').slice(0, -1));
 }
 
 function getLabels($) {
-  return [...$('div#db-tags-section.blank20>div.indent>span>a')].map(aEle => aEle.children[0].data)
+  return [...$('div#db-tags-section.blank20>div.indent>span>a')].map(aEle => aEle.children[0].data);
 }
 
 function getCoverUrl($) {
-  return $('div#mainpic>a.nbg')[0].attribs.href
+  return $('div#mainpic>a.nbg')[0].attribs.href;
 }
 
 function getRating($) {
@@ -93,7 +93,7 @@ function getRating($) {
     three_star_pre: 0,
     two_star_pre: 0,
     one_star_pre: 0,
-  }
+  };
   const cheeioDivRatingSumEleSpanEle = $('div.rating_sum>span');
   const cheeioDivRatingSumEleSpanEleText = cheeioDivRatingSumEleSpanEle.text().remove('\n', ' ');
   const divRatingSumEleSpanEle = cheeioDivRatingSumEleSpanEle[0];
@@ -122,7 +122,7 @@ function getComments($) {
     const comment = {};
     const cheerioCommentEle = $(commentEle);
 
-    const commentVoteSpanEle = cheerioCommentEle.find('span.vote-count')[0]
+    const commentVoteSpanEle = cheerioCommentEle.find('span.vote-count')[0];
     comment.vote = parseInt(commentVoteSpanEle.children[0].data);
 
     const commentInfoELe = cheerioCommentEle.find('span.comment-info')[0];
@@ -185,7 +185,9 @@ function getReviews($) {
   });
 }
 
+// eslint-disable-next-line no-unused-vars
 function getNotes($) {
+  // TODO
   return [];
 }
 
@@ -223,14 +225,14 @@ function parseHTML(html, id) {
     comments: getComments($),
     reviews: getReviews($),
     notes: getNotes($),
-  }
+  };
 }
 
 module.exports = parseHTML;
 
 if (require.main === module) {
   const html = require('fs').readFileSync('.cache/html/id/26807576.html', { encoding: 'utf8' });
-  const result = parseHTML(html)
+  const result = parseHTML(html);
   // require('fs').writeFileSync(`./.cache/result-3221090.json`, JSON.stringify(result, null, 2));
   console.log(result.book_intro);
 }
