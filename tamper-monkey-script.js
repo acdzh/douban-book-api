@@ -13,7 +13,7 @@
 // @grant          GM_registerMenuCommand
 // @include        https://book.douban.com/*
 // @include        https://search.douban.com/book/subject_search*
-// @version        1.1.0
+// @version        1.2.0
 // @icon           https://img3.doubanio.com/favicon.ico
 // @run-at         document-end
 // @namespace      doveboy_js
