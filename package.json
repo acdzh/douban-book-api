@@ -1,12 +1,13 @@
 {
   "name": "douban-book-api",
   "version": "1.1.0",
-  "main": "app.js",
+  "main": "src/app.js",
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build:calibre": "node ./calibre/build.js"
+    "build:calibre": "node ./calibre/build.js",
+    "lint": "eslint --ext .js,.jsx src"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
@@ -16,10 +17,13 @@
     "got": "^11.8.2",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
-    "koa-logger": "^3.2.1"
+    "koa-logger": "^3.2.1",
+    "sequelize": "^6.19.1",
+    "sqlite3": "^5.0.8"
   },
   "devDependencies": {
     "adm-zip": "^0.5.9",
+    "eslint": "^8.15.0",
     "nodemon": "^2.0.16"
   }
 }

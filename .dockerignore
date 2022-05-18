@@ -1,6 +1,7 @@
 .git
 .github
 .cache
+.gitignore
 docs
 node_modules
 README.md
