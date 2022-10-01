@@ -20,19 +20,15 @@ function toArray(obj) {
 }
 
 function getLinkingData($) {
-  const cheeioScriptJsonLinkingDataEleText = $('head>script[type="application/ld+json"]')[0]?.children[0]?.data || '{}';
+  const cheerioScriptJsonLinkingDataEleText = $('head>script[type="application/ld+json"]')[0]?.children[0]?.data || '{}';
   try {
-    const linkingData = JSON.parse(cheeioScriptJsonLinkingDataEleText);
+    const linkingData = JSON.parse(cheerioScriptJsonLinkingDataEleText);
     const author = linkingData.author.map(item => item.name);
     const { name: title, url, isbn } = linkingData;
     return { title, url, isbn, author };
   } catch {
     return {};
   }
-}
-
-function getId($) {
-  return $('div#interest_sect_level.clearfix>a')[0].attribs.name.split('-')[1];
 }
 
 function getTitle($) {
@@ -56,6 +52,20 @@ function getInfo($) {
   return info;
 }
 
+// function getIntros($) {
+//   const intros = {
+//     book: '',
+//     author: '',
+//   };
+//   const relatedInfoELe = $('div.related_info')[0];
+//   if (!relatedInfoELe) return intros;
+//   const cheerioRelatedInfoELe = $(relatedInfoELe);
+//
+//   const bookIndentPEles = cheerioRelatedInfoELe.find('div.indent#link-report>span.all>div.intro>p');
+//   intros.book = bookIndentPEles.map(ele => $(ele).text()).join('\n');
+//   const authorIndentSpanEle = cheerioRelatedInfoELe.find('div.indent#link-report>span.all')[1];
+// }
+
 function getBookIntro($) {
   return $('div.intro')[0]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0]?.data || '').filter(data => data !== '').join('\n') || '';
 }
@@ -68,7 +78,7 @@ function getCatalog($, id) {
   return $(`div.indent#dir_${id}_full`)[0]?.children
     .filter(ele => ele.type === 'text')
     .map(ele => ele.data.remove('\n', '        '))
-    .slice(0, -2) || '';
+    .slice(0, -2) || [];
 }
 
 function getOriginalTexts($) {
@@ -94,14 +104,15 @@ function getRating($) {
     two_star_pre: 0,
     one_star_pre: 0,
   };
-  const cheeioDivRatingSumEleSpanEle = $('div.rating_sum>span');
-  const cheeioDivRatingSumEleSpanEleText = cheeioDivRatingSumEleSpanEle.text().remove('\n', ' ');
-  const divRatingSumEleSpanEle = cheeioDivRatingSumEleSpanEle[0];
-  if (cheeioDivRatingSumEleSpanEleText === '目前无人评价') {
+  const cheerioDivRatingSumEleSpanEle = $('div.rating_sum>span');
+  if(cheerioDivRatingSumEleSpanEle.length === 0) return rating; // 评分被和谐
+  const cheerioDivRatingSumEleSpanEleText = cheerioDivRatingSumEleSpanEle.text().remove('\n', ' ');
+  const divRatingSumEleSpanEle = cheerioDivRatingSumEleSpanEle[0];
+  if (cheerioDivRatingSumEleSpanEleText === '目前无人评价') {
     rating.info ='目前无人评价';
     return rating;
   }
-  if (cheeioDivRatingSumEleSpanEleText === '评价人数不足') {
+  if (cheerioDivRatingSumEleSpanEleText === '评价人数不足') {
     rating.info = '评价人数不足';
     return rating;
   }
@@ -126,14 +137,15 @@ function getComments($) {
     comment.vote = parseInt(commentVoteSpanEle.children[0].data);
 
     const commentInfoELe = cheerioCommentEle.find('span.comment-info')[0];
+    const cheerioCommentInfoELe = $(commentInfoELe);
     const commentUserAEle = commentInfoELe.children[1];
     comment.user_name = commentUserAEle.children[0].data;
     comment.user_page = commentUserAEle.attribs.href;
 
-    const commentUserStarsSpanELe = commentInfoELe.children[3];
-    comment.rating = { 力荐: 5, 推荐: 4, 还行: 3, 较差: 2, 很差: 1 }[commentUserStarsSpanELe.attribs.title];
+    const commentUserStarsSpanELe = cheerioCommentInfoELe.find('span.user-stars')[0];
+    comment.rating = { 力荐: 5, 推荐: 4, 还行: 3, 较差: 2, 很差: 1, 不存在: 0 }[commentUserStarsSpanELe?.attribs?.title || '不存在'];
 
-    const commentTimeSpanEle = commentInfoELe.children[5];
+    const commentTimeSpanEle = cheerioCommentInfoELe.find('a.comment-time')[0];
     comment.date = commentTimeSpanEle?.children[0].data || '';
 
     const commentContentSpanEle = cheerioCommentEle.find('p.comment-content>span.short')[0];
@@ -197,7 +209,7 @@ function parseHTML(html, id) {
   const linkingData = getLinkingData($);
 
   if (!id) {
-    id = getId($);
+    id = /douban\.com\/book\/subject\/([\d]+)\//.exec(html)[1];
   }
   return {
     title: getTitle($),
@@ -214,6 +226,7 @@ function parseHTML(html, id) {
     price: info.定价 || '',
     binging: info.装帧 || '',
     series: info.丛书 || '',
+    // TODO: intro bugs
     book_intro: getBookIntro($),
     author_intro: getAuthorIntro($),
     catalog: getCatalog($, id),
