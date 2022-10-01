@@ -1,0 +1,3372 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff13 book-new-nav">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>TensorFlow实战 (豆瓣)</title>
+  
+<script>!function(e){var o=function(o,n,t){var c,i,r=new Date;n=n||30,t=t||"/",r.setTime(r.getTime()+24*n*60*60*1e3),c="; expires="+r.toGMTString();for(i in o)e.cookie=i+"="+o[i]+c+"; path="+t},n=function(o){var n,t,c,i=o+"=",r=e.cookie.split(";");for(t=0,c=r.length;t<c;t++)if(n=r[t].replace(/^\s+|\s+$/g,""),0==n.indexOf(i))return n.substring(i.length,n.length).replace(/\"/g,"");return null},t=e.write,c={"douban.com":1,"douban.fm":1,"google.com":1,"google.cn":1,"googleapis.com":1,"gmaptiles.co.kr":1,"gstatic.com":1,"gstatic.cn":1,"google-analytics.com":1,"googleadservices.com":1},i=function(e,o){var n=new Image;n.onload=function(){},n.src="https://www.douban.com/j/except_report?kind=ra022&reason="+encodeURIComponent(e)+"&environment="+encodeURIComponent(o)},r=function(o){try{t.call(e,o)}catch(e){t(o)}},a=/<script.*?src\=["']?([^"'\s>]+)/gi,g=/http:\/\/(.+?)\.([^\/]+).+/i;e.writeln=e.write=function(e){var t,l=a.exec(e);return l&&(t=g.exec(l[1]))?c[t[2]]?void r(e):void("tqs"!==n("hj")&&(i(l[1],location.href),o({hj:"tqs"},1),setTimeout(function(){location.replace(location.href)},50))):void r(e)}}(document);</script>
+
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+  
+<meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/book/subject/26974266/">
+<meta name="keywords" content="TensorFlow实战,黄文坚,唐源,电子工业出版社,2017-2-1,简介,作者,书评,论坛,推荐,二手">
+<meta name="description" content="图书TensorFlow实战 介绍、书评、论坛及推荐 ">
+
+  <script>var _head_start = new Date();</script>
+  
+  <link href="https://img3.doubanio.com/f/book/8011541306494bc2ff483299d952d9c65753c43d/css/book/master.css" rel="stylesheet" type="text/css">
+
+  <link href="https://img3.doubanio.com/f/book/222a5c61e041638af8defc87cf97f4a863a77922/css/book/base/init.css" rel="stylesheet">
+  <style type="text/css"></style>
+  <script src="https://img3.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js"></script>
+  <script src="https://img3.doubanio.com/f/shire/4888ee2fda6812f70a064a51c93b84fde8e4a3c2/js/douban.js"></script>
+  <script src="https://img3.doubanio.com/f/book/0322e3e810e475f1c82adb7d1c6ccfa1c0fa969c/js/book/master.js"></script>
+  
+
+  
+  <link rel="stylesheet" href="https://img3.doubanio.com/f/book/35ee0bfceaf192ef298d0729f3c3d40c0e2341d9/css/book/subject.css">
+  <link href="https://img3.doubanio.com/f/book/5d301503fbbd8e09f3114583859789884e942f47/css/book/annotation/like.css" rel="stylesheet">
+  <script src="https://img3.doubanio.com/f/shire/7965e09b0065d26bfd22d390de956c22a48b9008/js/lib/jquery.snippet.js"></script>
+  <script src="https://img3.doubanio.com/f/shire/2c0c1c6b83f9a457b0f38c38a32fc43a42ec9bad/js/do.js" data-cfg-autoload="false"></script>
+  <script src="https://img3.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js"></script>
+  <script src="https://img3.doubanio.com/f/book/2e421e5ec8f2869d31535206c0ac0322532be1f8/js/book/mod/hide.js"></script>
+  <script src="https://img3.doubanio.com/f/book/cc6b1a77c3812c7dd20b0374332fade081e1c0b0/js/book/subject/unfold.js"></script>
+  <!-- IDG Adsense代理广告代码 -->
+  <script data-ad-client="ca-pub-4792467485927557" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="alternate" href="https://book.douban.com/feed/subject/26974266/reviews" type="application/rss+xml" title="RSS">
+  <style type="text/css"> h2 {color: #007722;} </style>
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    (function(){ _vds.push(['setAccountId', '22c937bbd8ebd703f2d8e9445f7dfd03']);
+        _vds.push(['setCS1','user_id','0']);
+            (function() {var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+    })();
+</script>
+
+  
+  <script type='text/javascript'>
+    var _vwo_code=(function(){
+      var account_id=249272,
+          settings_tolerance=2000,
+          library_tolerance=2500,
+          use_existing_jquery=false,
+          // DO NOT EDIT BELOW THIS LINE
+          f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+  </script>
+
+  
+
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"Book",
+  "workExample": [],
+  "name" : "TensorFlow实战",
+  "author": 
+  [
+    {
+      "@type": "Person",
+      "name": "黄文坚"
+    }
+    ,
+    {
+      "@type": "Person",
+      "name": "唐源"
+    }
+  ]
+,
+  "url" : "https://book.douban.com/subject/26974266/",
+  "isbn" : "9787121309120",
+  "sameAs": "https://book.douban.com/subject/26974266/"
+}
+</script>
+
+  
+  
+  <meta property="og:title" content="TensorFlow实战" />
+  <meta property="og:description" content="Google近日发布了TensorFlow 1.0候选版，这个稳定版将是深度学习框架发展中的里程碑的一步。自TensorFlow于2015年底正式开源，距今已有一年多，这期间TensorFlow不断给..." />
+  <meta property="og:site_name" content="豆瓣" />
+  <meta property="og:url" content="https://book.douban.com/subject/26974266/" />
+  <meta property="og:image" content="https://img2.doubanio.com/view/subject/l/public/s29786442.jpg" />
+  <meta property="og:type" content="book" />
+      <meta property="book:author" content="黄文坚" />
+      <meta property="book:author" content="唐源" />
+  <meta property="book:isbn" content="9787121309120" />
+
+
+  <script>  </script>
+  <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/4237393ad061c327.css">
+
+  <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <script>var _body_start = new Date();</script>
+    
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/3e96b44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <a href="https://accounts.douban.com/passport/login?source=book" class="nav-login" rel="nofollow">登录/注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">豆瓣</a>
+    </li>
+    <li class="on">
+      <a href="https://book.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;0&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;0&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;0&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;0&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;0&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;0&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;0&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;0&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;0&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/3e96b44/shire/bundle.js" defer="defer"></script>
+
+
+
+
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/3e96b44/book/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;book.douban.com">豆瓣读书</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;book/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1001" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://book.douban.com/cart/"
+     >购书单</a>
+    </li>
+    <li    ><a href="https://read.douban.com/ebooks/?dcs=book-nav&dcm=douban"
+            target="_blank"
+     >电子图书</a>
+    </li>
+    <li    ><a href="https://market.douban.com/book?utm_campaign=book_nav_freyr&utm_source=douban&utm_medium=pc_web"
+     >豆瓣书店</a>
+    </li>
+    <li    ><a href="https://book.douban.com/annual/2021?source=navigation"
+            target="_blank"
+     >2021年度榜单</a>
+    </li>
+    <li    ><a href="https://www.douban.com/standbyme/2021?fullscreen=true&hidenav=true&autorotate=false&source=book_navigation"
+            target="_blank"
+     >2021书影音报告</a>
+    </li>
+    <li          class=" book-cart"
+    ><a href="https://market.douban.com/cart/?biz_type=book&utm_campaign=book_nav_cart&utm_source=douban&utm_medium=pc_web"
+            target="_blank"
+     >购物车</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://book.douban.com/annual/2021?source=book_navigation" class="bookannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'book_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= pic}}" width="40" />
+            <div>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                <p>
+                {{if type == "b"}}
+                    {{= author_name}}
+                {{else type == "a" }}
+                    {{if en_name}}
+                        {{= en_name}}
+                    {{/if}}
+                {{/if}}
+                 </p>
+            </div>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/3e96b44/book/bundle.js" defer="defer"></script>
+
+
+
+
+
+    <div id="wrapper">
+        
+
+    <div id="dale_book_subject_top_icon"></div>
+<h1>
+    <span property="v:itemreviewed">TensorFlow实战</span>
+    <div class="clear"></div>
+</h1>
+
+        
+  <div id="content">
+    
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+
+
+
+<div class="indent">
+  <div class="subjectwrap clearfix">
+    
+    
+
+
+
+<div class="subject clearfix">
+<div id="mainpic" class="">
+
+  
+
+  <a class="nbg"
+      href="https://img2.doubanio.com/view/subject/l/public/s29786442.jpg" title="TensorFlow实战">
+      <img src="https://img2.doubanio.com/view/subject/s/public/s29786442.jpg" title="点击看大图" alt="TensorFlow实战"
+         rel="v:photo" style="max-width: 135px;max-height: 200px;">
+  </a>
+
+
+</div>
+
+
+
+
+
+<div id="info" class="">
+
+
+
+    
+    
+  
+    <span>
+      <span class="pl"> 作者</span>:
+        
+            
+            <a class="" href="/search/%E9%BB%84%E6%96%87%E5%9D%9A">黄文坚</a>
+        
+           /
+            
+            <a class="" href="/search/%E5%94%90%E6%BA%90">唐源</a>
+    </span><br/>
+
+    
+    
+  
+    <span class="pl">出版社:</span>
+      <a href="https://book.douban.com/press/2573">电子工业出版社</a>
+    <br>
+
+    
+    
+  
+    <span class="pl">出品方:</span>
+      <a href="https://book.douban.com/producers/11">博文视点</a>
+    <br>
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+
+    
+    
+  
+    <span class="pl">出版年:</span> 2017-2-1<br/>
+
+    
+    
+  
+    <span class="pl">页数:</span> 316<br/>
+
+    
+    
+  
+    <span class="pl">定价:</span> 79<br/>
+
+    
+    
+  
+    <span class="pl">装帧:</span> 平装<br/>
+
+    
+    
+  
+    <span class="pl">丛书:</span>&nbsp;<a href="https://book.douban.com/series/41172">博文视点AI系列</a><br>
+
+    
+    
+  
+    
+      
+      <span class="pl">ISBN:</span> 9787121309120<br/>
+
+    
+    
+  
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
+<div id="interest_sectl" class="">
+  <div class="rating_wrap clearbox" rel="v:rating">
+    <div class="rating_logo">
+            豆瓣评分
+    </div>
+    <div class="rating_self clearfix" typeof="v:Rating">
+      <strong class="ll rating_num " property="v:average"> 7.2 </strong>
+      <span property="v:best" content="10.0"></span>
+      <div class="rating_right ">
+          <div class="ll bigstar35"></div>
+            <div class="rating_sum">
+                <span class="">
+                    <a href="comments" class="rating_people"><span property="v:votes">237</span>人评价</a>
+                </span>
+            </div>
+
+
+      </div>
+    </div>
+          
+            
+            
+<span class="stars5 starstop" title="力荐">
+    5星
+</span>
+
+            
+<div class="power" style="width:64px"></div>
+
+            <span class="rating_per">38.0%</span>
+            <br>
+            
+            
+<span class="stars4 starstop" title="推荐">
+    4星
+</span>
+
+            
+<div class="power" style="width:36px"></div>
+
+            <span class="rating_per">21.9%</span>
+            <br>
+            
+            
+<span class="stars3 starstop" title="还行">
+    3星
+</span>
+
+            
+<div class="power" style="width:44px"></div>
+
+            <span class="rating_per">26.6%</span>
+            <br>
+            
+            
+<span class="stars2 starstop" title="较差">
+    2星
+</span>
+
+            
+<div class="power" style="width:10px"></div>
+
+            <span class="rating_per">6.3%</span>
+            <br>
+            
+            
+<span class="stars1 starstop" title="很差">
+    1星
+</span>
+
+            
+<div class="power" style="width:12px"></div>
+
+            <span class="rating_per">7.2%</span>
+            <br>
+  </div>
+</div>
+
+  </div>
+  
+      
+
+
+
+
+
+
+  
+  <div id="interest_sect_level" class="clearfix">
+      <a href="#" rel="nofollow" class="j a_show_login colbutt ll" name="pbtn-26974266-wish">
+        <span>
+          
+<form method="POST" action="https://www.douban.com/register?reason=collectwish" class="miniform">
+    <input type="submit" class="minisubmit j  " value="想读" title="" />
+</form>
+
+        </span>
+      </a>
+      <a href="#" rel="nofollow" class="j a_show_login colbutt ll" name="pbtn-26974266-do">
+        <span>
+          
+<form method="POST" action="https://www.douban.com/register?reason=collectdo" class="miniform">
+    <input type="submit" class="minisubmit j  " value="在读" title="" />
+</form>
+
+        </span>
+      </a>
+      <a href="#" rel="nofollow" class="j a_show_login colbutt ll" name="pbtn-26974266-collect">
+        <span>
+          
+<form method="POST" action="https://www.douban.com/register?reason=collectcollect" class="miniform">
+    <input type="submit" class="minisubmit j  " value="读过" title="" />
+</form>
+
+        </span>
+      </a>
+    <div class="ll j a_stars">
+        
+    
+    评价:
+    <span id="rating"> <span id="stars" data-solid="https://img3.doubanio.com/f/shire/5a2327c04c0c231bced131ddf3f4467eb80c1c86/pics/rating_icons/star_onmouseover.png" data-hollow="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" data-solid-2x="https://img3.doubanio.com/f/shire/7258904022439076d57303c3b06ad195bf1dc41a/pics/rating_icons/star_onmouseover@2x.png" data-hollow-2x="https://img3.doubanio.com/f/shire/95cc2fa733221bb8edd28ad56a7145a5ad33383e/pics/rating_icons/star_hollow_hover@2x.png">
+
+            <a href="https://www.douban.com/register?reason=rate" class="j a_show_login" name="pbtn-26974266-1">
+            <img src="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star1" width="16" height="16"/>
+        </a>
+            <a href="https://www.douban.com/register?reason=rate" class="j a_show_login" name="pbtn-26974266-2">
+            <img src="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star2" width="16" height="16"/>
+        </a>
+            <a href="https://www.douban.com/register?reason=rate" class="j a_show_login" name="pbtn-26974266-3">
+            <img src="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star3" width="16" height="16"/>
+        </a>
+            <a href="https://www.douban.com/register?reason=rate" class="j a_show_login" name="pbtn-26974266-4">
+            <img src="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star4" width="16" height="16"/>
+        </a>
+            <a href="https://www.douban.com/register?reason=rate" class="j a_show_login" name="pbtn-26974266-5">
+            <img src="https://img3.doubanio.com/f/shire/2520c01967207a1735171056ec588c8c1257e5f8/pics/rating_icons/star_hollow_hover.png" id="star5" width="16" height="16"/>
+        </a>
+    </span><span id="rateword" class="pl"></span>
+    <input id="n_rating" type="hidden" value=""  />
+    </span>
+
+    </div>
+  </div>
+
+
+
+  
+
+
+
+
+
+
+
+  
+  <div class="gtleft">
+    <ul class="ul_subject_menu bicelink color_gray pt6 clearfix">
+        <li>
+          <img src="https://img3.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;
+          <a class="j a_show_login" href="https://book.douban.com/annotation/write?sid=26974266" rel="nofollow">写笔记</a>
+        </li>
+
+        <li>
+          <img src="https://img3.doubanio.com/f/shire/5bbf02b7b5ec12b23e214a580b6f9e481108488c/pics/add-review.gif" />&nbsp;<a class="j a_show_login" href="https://book.douban.com/subject/26974266/new_review" rel="nofollow">写书评</a>
+        </li>
+
+        <li>
+
+<span class="rr">
+
+
+    <img src="/pics/add-cart.gif"/>
+      <a class="j a_show_login" href="https://www.douban.com/accounts/passport/login?source=book" rel="nofollow">加入购书单</a>
+  <span class="hidden">已在<a href="https://book.douban.com/cart">购书单</a></span>
+</span><br class="clearfix" />
+</li>
+      
+
+        
+        
+    
+    <li class="rec" id="C-26974266">
+        <a href="#" data-url="https://book.douban.com/subject/26974266/" data-desc="" data-title="书籍《TensorFlow实战》 (来自豆瓣) " data-pic="https://img2.doubanio.com/view/subject/l/public/s29786442.jpg" class="bn-sharing ">分享到</a> &nbsp;&nbsp;
+    </li>
+    <script>
+    var __cache_url = __cache_url || {};
+    (function(u){
+        if(__cache_url[u]) return;
+        __cache_url[u] = true;
+        window.DoubanShareIcons = 'https://img3.doubanio.com/f/shire/d15ffd71f3f10a7210448fec5a68eaec66e7f7d0/pics/ic_shares.png';
+        var initShareButton = function() {
+          $.ajax({url:u,dataType:'script',cache:true});
+        };
+        if (typeof Do == 'function' && 'ready' in Do) {
+          Do('https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img3.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js',
+            initShareButton);
+        } else if(typeof Douban == 'object' && 'loader' in Douban) {
+          Douban.loader.batch(
+            'https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css',
+            'https://img3.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js'
+          ).done(initShareButton);
+        }
+    })('https://img3.doubanio.com/f/shire/64044c0cde0c2bbf9c3eb94e57da6070d0340c4b/js/lib/sharebutton.js');
+    </script>
+
+    </ul>
+  </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+
+<script>
+  //bind events for collection button.
+  $('.collect_btn', '#interest_sect_level').each(function(){
+      Douban.init_collect_btn(this);
+  });
+</script>
+
+</div>
+
+<br clear="all">
+<div id="collect_form_26974266"></div>
+<div class="related_info">
+  
+
+
+
+
+
+
+  
+
+  <h2>
+    <span>内容简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="link-report">
+    
+      <span class="short">
+        <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Google近日发布了TensorFlow 1.0候选版，这个稳定版将是深度学习框架发展中的里程碑的一步。自TensorFlow于2015年底正式开源，距今已有一年多，这期间TensorFlow不断给人以惊喜，推出了分布式版本，服务框架TensorFlow Serving，可视化工具TensorFlow，上层封装TF.Learn，其他语言（Go、Java、Rust、Haskell）的绑定、Windows的支持、JIT编译器XLA、动态计算图框架Fold，以及数不胜数的经典模型在TensorFlow上的实现（Inception Net、SyntaxNet等）。在这一年多时间，TensorFlow已从初入深度学习框架大战的新星，成为了几近垄断的行业事实标准。</p>    <p>《TensorFlow实战》希望用简单易懂的语言带领大家探索TensorFlow（基于1.0版本...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+       </span>
+      <span class="all hidden">
+        <div class="">
+          <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>Google近日发布了TensorFlow 1.0候选版，这个稳定版将是深度学习框架发展中的里程碑的一步。自TensorFlow于2015年底正式开源，距今已有一年多，这期间TensorFlow不断给人以惊喜，推出了分布式版本，服务框架TensorFlow Serving，可视化工具TensorFlow，上层封装TF.Learn，其他语言（Go、Java、Rust、Haskell）的绑定、Windows的支持、JIT编译器XLA、动态计算图框架Fold，以及数不胜数的经典模型在TensorFlow上的实现（Inception Net、SyntaxNet等）。在这一年多时间，TensorFlow已从初入深度学习框架大战的新星，成为了几近垄断的行业事实标准。</p>    <p>《TensorFlow实战》希望用简单易懂的语言带领大家探索TensorFlow（基于1.0版本API）。在《TensorFlow实战》中我们讲述了TensorFlow的基础原理，TF和其他框架的异同。并用具体的代码完整地实现了各种类型的深度神经网络：AutoEncoder、MLP、CNN（AlexNet，VGGNet，Inception Net，ResNet）、Word2Vec、RNN（LSTM，Bi-RNN）、Deep Reinforcement Learning(Policy Network、Value Network)。此外，《TensorFlow实战》还讲解了TensorBoard、多GPU并行、分布式并行、TF.Learn和其他TF.Contrib组件。《TensorFlow实战》希望能帮读者快速入门TensorFlow和深度学习，在工业界或者研究中快速地将想法落地为可实践的模型。</p></div>
+
+        </div>
+      </span>
+    
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/c4c6dd266f58b41cbeebc9e4e6d7dd7b2a5c3711/css/report.css" />
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css" />
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/23ff197799d608be56df5dfefb4974fa33f4579b/css/report_dialog.css" />
+<script type="text/javascript" src="https://img3.doubanio.com/f/shire/2748cca69dfeb86c089e9ddb12ad6e84a580cec3/js/report_dialog.js"></script>
+<style>
+    #link-report .report { text-align: right; font-size: 12px; visibility: hidden; }
+    #link-report .report a { color: #BBB; }
+    #link-report .report a:hover { color: #FFF; background-color: #BBB; }
+</style>
+<script>
+    Do = (typeof Do === 'undefined')? $ : Do;
+    Do(function(){
+    $("body").delegate("#link-report", 'mouseenter mouseleave', function(e){
+      switch (e.type) {
+        case "mouseenter":
+          $(this).find(".report").css('visibility', 'visible');
+          break;
+        case "mouseleave":
+          $(this).find(".report").css('visibility', 'hidden');
+          break;
+      }
+    });
+    $("#link-report").delegate(".report a", 'click', function(e){
+        e.preventDefault();
+        var opt = "";
+        var obj = $(e.target).closest('#link-report');
+        var id = obj.length != 0 ? obj.data("id") : undefined;
+        var params = (opt&&id) ? ''.concat(opt, '=', id) : '';
+
+        var url = "https://book.douban.com/subject/26974266/";
+        url += (~url.indexOf('?') ? '&' : '?') + params
+        url = url.replace(/\&+/g, '&')
+        generate_report_dialog({report_url: url, type: 'subject'});
+    });
+
+    $("#link-report").append('<div class="report"><a rel="nofollow" href="#">投诉</a></div>');
+  });
+</script>
+
+</div>
+
+  
+      
+
+<style type="text/css" media="screen">
+  .online-partner{display:flex;align-items:center;padding-top:10px;padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #D8D8D8}.online-partner .online-type{display:flex;align-items:center}.online-partner .online-type:nth-child(2){padding-left:20px}.online-read-or-audio{display:inline-block;color:rgba(0,0,0,0.9);font-size:12px;line-height:24px}.online-read-or-audio a{display:flex;align-items:center;margin-right:10px;padding:0 15px 0 7px;border:1px solid rgba(0,0,0,0.25);border-radius:5px;vertical-align:middle;color:rgba(0,0,0,0.9)}.online-read-or-audio a:after{content:'';width:5px;height:5px;border-right:1px solid rgba(0,0,0,0.8);border-top:1px solid rgba(0,0,0,0.8);transform:rotate(45deg);margin-right:-6px}.online-read-or-audio a:hover{background:#fff;opacity:.8}.online-read-or-audio img{border-radius:50%;box-shadow:0 0 1px 0 rgba(0,0,0,0.6)}.online-read-or-audio span{padding:0 3px 0 5px}
+
+</style>
+
+
+  
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+    
+  
+
+  <h2>
+    <span>作者简介</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+      <div class="indent ">
+          
+            <span class="short">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>黄文坚，PPmoney大数据算法总监，负责集团的风控、理财、互联网证券等业务的数据挖掘工作。Google TensorFlow Contributor。前明略数据技术合伙人，领导了对诸多大型银行、保险公司、基金的数据挖掘项目，包括建立金融风控模型、新闻舆情分析、保险复购预测等。曾就职于阿里巴巴搜索引擎算法团队，负责天猫个性化搜索系统。曾参加阿里巴巴大数据推荐算法大赛，于7000多支队伍中获得前10名。本科、研究生就读于香港科技大学，曾在会议和期刊SIGMOBILE MobiCom、IEEE Transactions on Image Processing发表论文，研究成果获美国计算机协会移动计算大会（MobiCom）移动应用技术冠军，并获得两项美国专利和一项中国专利。</p>    <p>唐源，目前在芝加哥的Uptake公司带领团队建立用于多个物联网领域的数据科学引擎进...</p><p><a href="javascript:void(0)" class="j a_show_full">(展开全部)</a></p></div>
+
+            </span>
+            <span class="all hidden ">
+                <style type="text/css" media="screen">
+.intro p{text-indent:2em;word-break:normal;}
+</style>
+<div class="intro">
+    <p>黄文坚，PPmoney大数据算法总监，负责集团的风控、理财、互联网证券等业务的数据挖掘工作。Google TensorFlow Contributor。前明略数据技术合伙人，领导了对诸多大型银行、保险公司、基金的数据挖掘项目，包括建立金融风控模型、新闻舆情分析、保险复购预测等。曾就职于阿里巴巴搜索引擎算法团队，负责天猫个性化搜索系统。曾参加阿里巴巴大数据推荐算法大赛，于7000多支队伍中获得前10名。本科、研究生就读于香港科技大学，曾在会议和期刊SIGMOBILE MobiCom、IEEE Transactions on Image Processing发表论文，研究成果获美国计算机协会移动计算大会（MobiCom）移动应用技术冠军，并获得两项美国专利和一项中国专利。</p>    <p>唐源，目前在芝加哥的Uptake公司带领团队建立用于多个物联网领域的数据科学引擎进行条件和健康监控，也建立了公司的预测模型引擎，现在被用于航空、能源等大型机械领域。一直活跃在开源软件社区，是TensorFlow和DMLC的成员，是TensorFlow、XGBoost、MXNet等软件的committer，TF.Learn、ggfortify等软件的作者，以及caret、pandas等软件的贡献者。曾获得谷歌Open Source Peer Bonus，以及多项高校和企业编程竞赛的奖项。在美国宾州州立大学获得荣誉数学学位，曾在本科学习期间成为创业公司DataNovo的核心创始成员，研究专利数据挖掘、无关键字现有技术搜索、策略推荐等。</p></div>
+
+            </span>
+      </div>
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
+  
+
+  <h2>
+    <span>目录</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+<div class="indent" id="dir_26974266_short">
+        1 TensorFlow基础 1<br/>
+        1.1 TensorFlow概要 1<br/>
+        1.2 TensorFlow编程模型简介 4<br/>
+        2 TensorFlow和其他深度学习框架的对比 18<br/>
+        2.1 主流深度学习框架对比 18<br/>
+        2.2 各深度学习框架简介 20<br/>
+    · · · · · ·
+    (<a href="javascript:$('#dir_26974266_short').hide();$('#dir_26974266_full').show();$.get('/j/subject/j_dir_count',{id:26974266});void(0);">更多</a>)
+</div>
+
+<div class="indent" id="dir_26974266_full" style="display:none">
+        1 TensorFlow基础 1<br/>
+        1.1 TensorFlow概要 1<br/>
+        1.2 TensorFlow编程模型简介 4<br/>
+        2 TensorFlow和其他深度学习框架的对比 18<br/>
+        2.1 主流深度学习框架对比 18<br/>
+        2.2 各深度学习框架简介 20<br/>
+        3 TensorFlow第一步 39<br/>
+        3.1 TensorFlow的编译及安装 39<br/>
+        3.2 TensorFlow实现SoftmaxRegression识别手写数字 46<br/>
+        4 TensorFlow实现自编码器及多层感知机 55<br/>
+        4.1 自编码器简介 55<br/>
+        4.2 TensorFlow实现自编码器 59<br/>
+        4.3 多层感知机简介 66<br/>
+        4.4 TensorFlow实现多层感知机 70<br/>
+        5 TensorFlow实现卷积神经网络 74<br/>
+        5.1 卷积神经网络简介 74<br/>
+        5.2 TensorFlow实现简单的卷积网络 80<br/>
+        5.3 TensorFlow实现进阶的卷积网络 83<br/>
+        6 TensorFlow实现经典卷积神经网络 95<br/>
+        6.1 TensorFlow实现AlexNet 97<br/>
+        6.2 TensorFlow实现VGGNet 108<br/>
+        6.3 TensorFlow实现GoogleInceptionNet 119<br/>
+        6.4 TensorFlow实现ResNet 143<br/>
+        6.5 卷积神经网络发展趋势 156<br/>
+        7 TensorFlow实现循环神经网络及Word2Vec 159<br/>
+        7.1 TensorFlow实现Word2Vec 159<br/>
+        7.2 TensorFlow实现基于LSTM的语言模型 173<br/>
+        7.3 TensorFlow实现BidirectionalLSTMClassifier 188<br/>
+        8 TensorFlow实现深度强化学习 195<br/>
+        8.1 深度强化学习简介 195<br/>
+        8.2 TensorFlow实现策略网络 201<br/>
+        8.3 TensorFlow实现估值网络 213<br/>
+        9 TensorBoard、多GPU并行及分布式并行 233<br/>
+        9.1 TensorBoard 233<br/>
+        9.2 多GPU并行 243<br/>
+        9.3 分布式并行 249<br/>
+        10 TF.Learn从入门到精通 259<br/>
+        10.1 分布式Estimator 259<br/>
+        10.2 深度学习Estimator 267<br/>
+        10.3 机器学习Estimator 272<br/>
+        10.4 DataFrame 278<br/>
+        10.5 监督器Monitors 279<br/>
+        11 TF.Contrib的其他组件 283<br/>
+        11.1 统计分布 283<br/>
+        11.2 Layer模块 285<br/>
+        11.3 性能分析器tfprof 293<br/>
+        参考文献 297<br/>
+     · · · · · ·     (<a href="javascript:$('#dir_26974266_full').hide();$('#dir_26974266_short').show();void(0);">收起</a>)
+</div>
+
+
+
+  
+
+
+<link rel="stylesheet" href="https://img3.doubanio.com/f/verify/fada435abd10ae2583d995730a9e06e6e20a9a05/entry_creator/dist/author_subject/style.css">
+
+<div id="author_subject" class="author-wrapper">
+  <div class="loading"></div>
+</div>
+
+<script type="text/javascript">
+  var answerObj = {
+    TYPE: 'book',
+    SUBJECT_ID: '26974266',
+    ISALL: 'False' || false,
+    USER_ID: 'None'
+  }
+</script>
+<script src="https://img3.doubanio.com/f/book/61252f2f9b35f08b37f69d17dfe48310dd295347/js/book/lib/react/bundle.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/verify/edce26706e9ad788e0b2f4cb32c6d369c19cfc99/entry_creator/dist/author_subject/index.js"></script> 
+  
+      
+
+
+
+
+
+
+
+
+<div class="ugc-mod blockquote-list-wrapper">
+  <div class="hd">
+    <h2>
+      原文摘录
+      &nbsp;&nbsp;· · · · · ·&nbsp;
+    </h2>
+
+    <ul class="blockquote-list">
+      
+        <li>
+          <figure>
+            自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。 (<a href="https://book.douban.com/annotation/57258727/">查看原文</a>)
+
+            <div class="blockquote-extra">
+              <div class='blockquote-meta'>
+                <a href="https://www.douban.com/people/71430604/" class="author-avatar">
+                  <img width="20" height="20" src="https://img2.doubanio.com/icon/u71430604-1.jpg">
+                </a>
+                <a class="author-name" href="https://www.douban.com/people/71430604/">十三少</a>
+                <datetime>2018-06-02 11:19:58</datetime>
+              </div>
+
+              
+              <figcaption title="引自第57页">
+                —— 引自第57页
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+    </ul>
+
+  </div>
+</div>
+
+  
+
+  
+      
+
+
+
+<div class="subject_show block5">
+<h2>
+    丛书信息
+</h2>
+<div>
+　　<a href="https://book.douban.com/series/41172">博文视点AI系列 (共98册)</a>,
+这套丛书还有
+《深入浅出PyTorch――从模型到源码》,《联邦学习》,《TensorFlow从零开始学》,《深度强化学习落地指南》,《突围算法：机器学习算法应用》    等。</div>
+</div>
+<script>
+$(function(){$(".knnlike a").click(function(){return moreurl(this,{'from':'knnlike'})})})
+</script>
+
+  
+
+
+
+
+  
+
+
+
+
+<div id="rec-ebook-section" class="block5 subject_show">
+  
+
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;TensorFlow实战&#34;的人也喜欢的电子书</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="tips-mod">
+    支持 Web、iPhone、iPad、Android 阅读器
+  </div>
+  <div class="content clearfix">
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/58176156/?dcs=subject-rec&amp;dcm=douban&amp;dct=26974266" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/58176156.1653701105.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/58176156/" target="_blank">解析深度学习：语音识别实践</a>
+          </div>
+          <div class="price">
+              
+    21.33元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/1499455/?dcs=subject-rec&amp;dcm=douban&amp;dct=26974266" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/1499455.1653713217.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/1499455/" target="_blank">Python源码剖析</a>
+          </div>
+          <div class="price">
+              
+    38.39元
+
+          </div>
+        </dd>
+      </dl>
+      
+      <dl>
+        <dt>
+          <a href="https://read.douban.com/ebook/1281060/?dcs=subject-rec&amp;dcm=douban&amp;dct=26974266" target="_blank">
+            <span class="cover-outer">
+              <img src="https://pic.arkread.com/cover/ebook/f/1281060.1653713303.jpg!cover_default.jpg">
+            </span>
+          </a>
+        </dt>
+        <dd>
+          <div class="title">
+              <a href="https://read.douban.com/ebook/1281060/" target="_blank">淘宝技术这十年</a>
+          </div>
+          <div class="price">
+              
+    4.99元
+
+          </div>
+        </dd>
+      </dl>
+  </div>
+</div>
+
+<div id="db-rec-section" class="block5 subject_show knnlike">
+  
+  
+  
+
+  <h2>
+    <span>喜欢读&#34;TensorFlow实战&#34;的人也喜欢</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+  <div class="content clearfix">
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/25899625/" onclick="moreurl(this, {'total': 10, 'clicked': '25899625', 'pos': 0, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img3.doubanio.com/view/subject/s/public/s27296520.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/25899625/" onclick="moreurl(this, {'total': 10, 'clicked': '25899625', 'pos': 0, 'identifier': 'book-rec-books'})" class="">
+            机器学习系统设计
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/27031750/" onclick="moreurl(this, {'total': 10, 'clicked': '27031750', 'pos': 1, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s29437348.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/27031750/" onclick="moreurl(this, {'total': 10, 'clicked': '27031750', 'pos': 1, 'identifier': 'book-rec-books'})" class="">
+            面向机器智能的TensorFlow实践
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/6797247/" onclick="moreurl(this, {'total': 10, 'clicked': '6797247', 'pos': 2, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s6875213.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/6797247/" onclick="moreurl(this, {'total': 10, 'clicked': '6797247', 'pos': 2, 'identifier': 'book-rec-books'})" class="">
+            Scaling up Machine Learning
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26826540/" onclick="moreurl(this, {'total': 10, 'clicked': '26826540', 'pos': 3, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s28850686.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26826540/" onclick="moreurl(this, {'total': 10, 'clicked': '26826540', 'pos': 3, 'identifier': 'book-rec-books'})" class="">
+            Python数据挖掘入门与实践
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/27187200/" onclick="moreurl(this, {'total': 10, 'clicked': '27187200', 'pos': 4, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s29596594.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/27187200/" onclick="moreurl(this, {'total': 10, 'clicked': '27187200', 'pos': 4, 'identifier': 'book-rec-books'})" class="">
+            TensorFlow机器学习项目实战
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26593179/" onclick="moreurl(this, {'total': 10, 'clicked': '26593179', 'pos': 5, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s28323081.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26593179/" onclick="moreurl(this, {'total': 10, 'clicked': '26593179', 'pos': 5, 'identifier': 'book-rec-books'})" class="">
+            Spark机器学习
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/30178902/" onclick="moreurl(this, {'total': 10, 'clicked': '30178902', 'pos': 6, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img1.doubanio.com/view/subject/s/public/s29744649.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/30178902/" onclick="moreurl(this, {'total': 10, 'clicked': '30178902', 'pos': 6, 'identifier': 'book-rec-books'})" class="">
+            Effective Modern C++ 简体中文版
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/3098386/" onclick="moreurl(this, {'total': 10, 'clicked': '3098386', 'pos': 7, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img9.doubanio.com/view/subject/s/public/s22712854.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/3098386/" onclick="moreurl(this, {'total': 10, 'clicked': '3098386', 'pos': 7, 'identifier': 'book-rec-books'})" class="">
+            Problem Solving with Algorithms a...
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/24746415/" onclick="moreurl(this, {'total': 10, 'clicked': '24746415', 'pos': 8, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s26707013.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/24746415/" onclick="moreurl(this, {'total': 10, 'clicked': '24746415', 'pos': 8, 'identifier': 'book-rec-books'})" class="">
+            推荐系统
+          </a>
+        </dd>
+      </dl>
+      
+      <dl class="">
+        <dt>
+            <a href="https://book.douban.com/subject/26883982/" onclick="moreurl(this, {'total': 10, 'clicked': '26883982', 'pos': 9, 'identifier': 'book-rec-books'})"><img class="m_sub_img" src="https://img2.doubanio.com/view/subject/s/public/s29133163.jpg"/></a>
+        </dt>
+        <dd>
+          <a href="https://book.douban.com/subject/26883982/" onclick="moreurl(this, {'total': 10, 'clicked': '26883982', 'pos': 9, 'identifier': 'book-rec-books'})" class="">
+            Deep Learning
+          </a>
+        </dd>
+      </dl>
+        <dl class="clear"></dl>
+  </div>
+</div>
+
+  
+      
+
+
+
+
+<div id="comments-section">
+    <link rel="stylesheet" href="https://img3.doubanio.com/f/book/d63a579a99fd372b4398731a279a1382e6eac71e/css/book/lib/subject-comments/comments-section.css"/>
+    <div class="mod-hd">
+        
+
+        <a class="redbutt j a_show_login rr" href="https://www.douban.com/register?reason=review" rel="nofollow">
+            <span> 我来说两句 </span>
+        </a>
+
+            
+  
+
+  <h2>
+    <span>短评</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26974266/comments/">全部 86 条</a>
+        ) </span>
+
+  </h2>
+
+
+    </div>
+    <div class="nav-tab">
+        
+    <div class="tabs-wrapper  line">
+                <a class="short-comment-tabs on-tab" 
+                    href="https://book.douban.com/subject/26974266/comments?sort=new_score" 
+                    data-tab="new_score">热门</a>
+                <span>/</span>
+                <a class="short-comment-tabs " 
+                    href="https://book.douban.com/subject/26974266/comments?sort=time" 
+                    data-tab="time">最新</a>
+                <span>/</span>
+                <a class="j a_show_login " 
+                    href="https://book.douban.com/subject/26974266/comments?sort=follows" 
+                    data-tab="follows">好友</a>
+    </div>
+
+    </div>
+    <div id="comment-list-wrapper" class="indent">
+        
+  
+  <div class="comment-list new_score show" id="new_score">
+      <ul>
+          
+  <li class="comment-item" data-cid="1158747874">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1158747874" class="vote-count">3</span>
+              <a id="btn-1158747874" href="" class="j a_show_login" data-cid="1158747874">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/75245273/">惟恍惟惚</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1158747874">2017-03-18 16:52:25</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">不错的进阶书，不过不适合入门，没有一定基础感觉是在看天书。对NLP领域不熟，看第七章好头大呀。第十章和十一章讲的东西没接触过，有种不明觉厉的感觉。</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1159821971">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1159821971" class="vote-count">9</span>
+              <a id="btn-1159821971" href="" class="j a_show_login" data-cid="1159821971">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/46011437/">薛定谔的熊</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1159821971">2017-03-03 16:58:30</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">做数据挖掘的，所以深度学习这块的模型基本上用不太上，不过每次跟人吹牛逼的时候总会扯到着一块，感觉不说点什么显得多不专业啊，然后就想了解着一块。其实简单的BP 以前也接触过，但是多层的神经网络确实没怎么系统的了解，然后就看了这本书。算是本还不错的深度学习的入门书吧，得益于tensorflow本身的封装层次设计合理，所以可以相对自由的写一些的模型，从而学到一些模型的细节，而又不必纠结于成篇的公式，可以...</span>
+        <span class="hide-item full">做数据挖掘的，所以深度学习这块的模型基本上用不太上，不过每次跟人吹牛逼的时候总会扯到着一块，感觉不说点什么显得多不专业啊，然后就想了解着一块。其实简单的BP 以前也接触过，但是多层的神经网络确实没怎么系统的了解，然后就看了这本书。算是本还不错的深度学习的入门书吧，得益于tensorflow本身的封装层次设计合理，所以可以相对自由的写一些的模型，从而学到一些模型的细节，而又不必纠结于成篇的公式，可以说面向初学者友好的一本讲深度学习的书，也算是对得起实战二字。不过即便这样看这书也又必须的门槛的，假如你是测试集、训练集，损失函数、正则化，梯度下降、牛顿法都不了解的小白可能会看起来一脸懵逼吧。总之算是很好的一本DL的入门书，内容融合的作者自己对模型的理解，而且还是国人写的，读起来比较有快感，好评！</span>
+        <span class="expand">(<a href="javascript:;">展开</a>)</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1225533740">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1225533740" class="vote-count">0</span>
+              <a id="btn-1225533740" href="" class="j a_show_login" data-cid="1225533740">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/3563300/">suefsharp</a>
+            <span class="user-stars allstar30 rating" title="还行"></span>
+          <a class="comment-time" href="/comment/1225533740">2017-08-06 14:15:57</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">汪说最多值三十块钱😂</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1164153263">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1164153263" class="vote-count">2</span>
+              <a id="btn-1164153263" href="" class="j a_show_login" data-cid="1164153263">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/jakungyang/">Jackon</a>
+            <span class="user-stars allstar50 rating" title="力荐"></span>
+          <a class="comment-time" href="/comment/1164153263">2017-03-13 10:36:25</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">有原理，有实践。非常赞。</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="1175269475">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-1175269475" class="vote-count">1</span>
+              <a id="btn-1175269475" href="" class="j a_show_login" data-cid="1175269475">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/pkuwangliang/">王亮</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/1175269475">2017-04-08 12:33:49</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">未能免俗地读了这本书。。虽然书里的内容大部分是Tensorflow文档里面已经有的，但组织成一本书看起来更方便一些。</span>
+      </p>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+  
+
+
+        
+  
+  <div class="comment-list time noshow" id="time">
+      <ul>
+          
+  <li class="comment-item" data-cid="3018322738">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-3018322738" class="vote-count">0</span>
+              <a id="btn-3018322738" href="" class="j a_show_login" data-cid="3018322738">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/204793985/">EveNice</a>
+            <span class="user-stars allstar30 rating" title="还行"></span>
+          <a class="comment-time" href="/comment/3018322738">2021-10-02 23:37:18</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">tensorflow1.0</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2921461908">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2921461908" class="vote-count">0</span>
+              <a id="btn-2921461908" href="" class="j a_show_login" data-cid="2921461908">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/169111595/">liangslol</a>
+            <span class="user-stars allstar10 rating" title="很差"></span>
+          <a class="comment-time" href="/comment/2921461908">2021-06-20 10:52:25</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">官方文档的垃圾翻译</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2500744751">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2500744751" class="vote-count">0</span>
+              <a id="btn-2500744751" href="" class="j a_show_login" data-cid="2500744751">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/34722284/">Owns</a>
+            <span class="user-stars allstar30 rating" title="还行"></span>
+          <a class="comment-time" href="/comment/2500744751">2020-08-21 12:53:33</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">内容较老</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2285588517">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2285588517" class="vote-count">0</span>
+              <a id="btn-2285588517" href="" class="j a_show_login" data-cid="2285588517">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/110055296/">喜笑严开陆知之</a>
+            <span class="user-stars allstar40 rating" title="推荐"></span>
+          <a class="comment-time" href="/comment/2285588517">2020-06-12 21:56:22</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">真挺不错 看看案例什么的 给了我不少帮助</span>
+      </p>
+    </div>
+  </li>
+
+          
+  <li class="comment-item" data-cid="2325322857">
+    <div class="comment">
+      <h3>
+        <span class="comment-vote">
+            <span id="c-2325322857" class="vote-count">0</span>
+              <a id="btn-2325322857" href="" class="j a_show_login" data-cid="2325322857">有用</a>
+
+        </span>
+        <span class="comment-info">
+          <a href="https://www.douban.com/people/103287684/">碎碎冰</a>
+          <a class="comment-time" href="/comment/2325322857">2020-04-04 21:16:10</a>
+          <span class="comment-location"></span>
+        </span>
+      </h3>
+      <p class="comment-content">
+      
+        <span class="short">每个调参师都有一本祖传但是没有看完过的。。。。。，几年后再传给下一代人</span>
+      </p>
+    </div>
+  </li>
+
+      </ul>
+  </div>
+  
+
+
+    </div>
+        <p>&gt; <a href="https://book.douban.com/subject/26974266/comments/">更多短评 86 条</a></p>
+    <script src="https://img3.doubanio.com/f/book/6eba6f43fb7592ab783e390f654c0d6a96b1598e/js/book/lib/subject-comments/comments-section.js"></script>
+    <script>
+        (function () {
+            if (window.SUBJECT_COMMENTS_SECTION) {
+                // tab handler
+                SUBJECT_COMMENTS_SECTION.createTabHandler();
+                // expand handler
+                SUBJECT_COMMENTS_SECTION.createExpandHandler({
+                    root: document.getElementById('comment-list-wrapper'),
+                });
+                SUBJECT_COMMENTS_SECTION.createVoteHandler({
+                    api: '/j/comment/:id/vote',
+                    root: document.getElementById('comment-list-wrapper'),
+                    voteSelector: '.vote-comment',
+                    textSelector: '.vote-count',
+                    afterVote: function (elem) {
+                        var parentNode = elem.parentNode;
+                        var successElem = document.createElement('span');
+                        successElem.innerHTML = '已投票';
+                        parentNode.removeChild(elem);
+                        parentNode.appendChild(successElem);
+                    }
+                });
+            }
+        })()
+    </script>
+</div>
+
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/59d264aa9a705a7a.css">
+
+    <section id="reviews-wrapper" class="reviews mod book-content">
+        <header>
+            
+                <a href="new_review" rel="nofollow" class="create-review redbutt rr "
+                    data-isverify="False"
+                    data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/26974266/new_review">
+                    <span>我要写书评</span>
+                </a>
+            <h2>
+                    TensorFlow实战的书评 · · · · · ·
+
+                    <span class="pl">( <a href="reviews">全部 3 条</a> )</span>
+            </h2>
+        </header>
+
+            <div class="review_filter">
+                            <a href="javascript:;;" class="cur" data-sort="">热门</a> &#047;
+                            <a href="javascript:;;" data-sort="time">最新</a> &#047;
+                            <a href="javascript:;;" data-sort="follow">好友</a>
+            </div>
+            <script>
+                var cur_sort = '';
+                $('#reviews-wrapper .review_filter a').on('click', function () {
+                    var sort = $(this).data('sort');
+                    if(sort === cur_sort) return;
+
+                    if(sort === 'follow' && true){
+                        window.location.href = '//www.douban.com/accounts/login?source=movie';
+                        return;
+                    }
+
+                    if($('#reviews-wrapper .review_filter').data('doing')) return;
+                    $('#reviews-wrapper .review_filter').data('doing', true);
+
+                    cur_sort = sort;
+
+                    $('#reviews-wrapper .review_filter a').removeClass('cur');
+                    $(this).addClass('cur');
+
+                    $.getJSON('reviews', { sort: sort }, function(res) {
+                        $('#reviews-wrapper .review-list').remove();
+                        $('#reviews-wrapper [href="reviews?sort=follow"]').parent().remove();
+                        $('#reviews-wrapper .review_filter').after(res.html);
+                        $('#reviews-wrapper .review_filter').data('doing', false);
+                        $('#reviews-wrapper .review_filter').removeData('doing');
+
+                        if (res.count === 0) {
+                            $('#reviews-wrapper .review-list').html('<span class="no-review">你关注的人还没写过长评</span>');
+                        }
+                    });
+                });
+            </script>
+
+
+            
+
+
+
+<div class="review-list  ">
+        
+    
+
+        
+    
+    <div data-cid="8531122">
+        <div class="main review-item" id="8531122">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/159202867/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u159202867-1.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/159202867/" class="name">ichaobuster</a>
+
+            <span class="allstar30 main-title-rating" title="还行"></span>
+
+        <span content="2017-05-10" class="main-meta">2017-05-10 13:28:30</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/8531122/">不推荐给初学者</a></h2>
+
+                <div id="review_8531122_short" class="review-short" data-rid="8531122">
+                    <div class="short-content">
+
+                        《tensorflow实战》这本书很不推荐初学机器学习、深度学习和tensorflow的朋友们阅读，要看懂需要的预备知识很多都没有讲，读起来很累。 建议直接读tensorflow.org的教程或tensorflow中文社区的翻译文档更好点。 比如，书上第三章的安装和最简单MNIST例子的实践，最后我是按着te...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-8531122-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_8531122_full" class="hidden">
+                    <div id="review_8531122_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="8531122" title="有用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-8531122">
+                                7
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="8531122" title="没用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-8531122">
+                                4
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/8531122/#comments" class="reply ">0回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    
+    <div data-cid="9261978">
+        <div class="main review-item" id="9261978">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/louiss007/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/u71942886-3.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/louiss007/" class="name">louiss007</a>
+
+            <span class="allstar40 main-title-rating" title="推荐"></span>
+
+        <span content="2018-03-31" class="main-meta">2018-03-31 17:42:01</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/9261978/">一本不错的TensorFlow入门书籍</a></h2>
+
+                <div id="review_9261978_short" class="review-short" data-rid="9261978">
+                    <div class="short-content">
+
+                        作者由浅入深的首先介绍了TensorFlow的架构，以及与各种主流架构的对比。其次，开篇比较详细的介绍了TensorFlow的安装，分布CPU和GPU两个版本。接着，作者介绍了几种深度神经网络，包括最基础的前馈网络，重点介绍用于图像方面的卷积神经网络，以及用于文本和自然语言处理方面...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-9261978-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_9261978_full" class="hidden">
+                    <div id="review_9261978_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="9261978" title="有用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-9261978">
+                                1
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="9261978" title="没用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-9261978">
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/9261978/#comments" class="reply ">1回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    
+    <div data-cid="8394965">
+        <div class="main review-item" id="8394965">
+
+            
+    
+    <header class="main-hd">
+        <a href="https://www.douban.com/people/158578125/" class="avator">
+            <img width="24" height="24" src="https://img2.doubanio.com/icon/user_normal_f.jpg">
+        </a>
+
+        <a href="https://www.douban.com/people/158578125/" class="name">随遇而安</a>
+
+            <span class="allstar50 main-title-rating" title="力荐"></span>
+
+        <span content="2017-03-03" class="main-meta">2017-03-03 21:27:56</span>
+
+
+    </header>
+
+
+            <div class="main-bd">
+
+                <h2><a href="https://book.douban.com/review/8394965/">读书体验</a></h2>
+
+                <div id="review_8394965_short" class="review-short" data-rid="8394965">
+                    <div class="short-content">
+
+                        《TensorFlow实战》真的非常实用、易懂，能快速入门和深度学习，感觉真的买对了，学习体验棒棒哒👍！在学习中体验想法落地为实践模型的乐趣！ 在《TensorFlow实战》中讲述了TensorFlow的基础原理，TF和其他框架的异同。并用具体的代码完整地实现了各种类型的深度神经网络：Au...
+
+                        &nbsp;(<a href="javascript:;" id="toggle-8394965-copy" class="unfold" title="展开">展开</a>)
+                    </div>
+                </div>
+
+                <div id="review_8394965_full" class="hidden">
+                    <div id="review_8394965_full_content" class="full-content"></div>
+                </div>
+
+                <div class="action">
+                    <a href="javascript:;" class="action-btn up" data-rid="8394965" title="有用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/536fd337139250b5fb3cf9e79cb65c6193f8b20b/pics/up.png" />
+                        <span id="r-useful_count-8394965">
+                                3
+                        </span>
+                    </a>
+                    <a href="javascript:;" class="action-btn down" data-rid="8394965" title="没用">
+                        <img src="https://img3.doubanio.com/f/zerkalo/68849027911140623cf338c9845893c4566db851/pics/down.png" />
+                        <span id="r-useless_count-8394965">
+                                5
+                        </span>
+                    </a>
+                    <a href="https://book.douban.com/review/8394965/#comments" class="reply ">4回应</a>
+
+                    <a href="javascript:;;" class="fold hidden">收起</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    
+
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/508c53e255d9289d.js"></script>
+    <!-- COLLECTED CSS -->
+</div>
+
+
+
+
+
+
+
+
+                <p class="pl">
+                    &gt;
+                        <a href="reviews">
+                            更多书评
+                                3篇
+                        </a>
+                </p>
+    </section>
+<!-- COLLECTED JS -->
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="ugc-mod reading-notes">
+  <div class="hd">
+    <h2>
+      读书笔记
+      &nbsp;&nbsp;· · · · · ·&nbsp;
+          <span class="pl">(<a href="https://book.douban.com/subject/26974266/annotation">共<span property="v:count">7</span>篇</a>)</span>
+
+    </h2>
+
+        <a class="redbutt rr j a_show_login" 
+          href="https://www.douban.com/register?reason=annotate" 
+          rel="nofollow">
+          <span>我来写笔记</span>
+        </a>
+    
+  </div>
+  
+
+    <div class="bd">
+      <ul class="inline-tabs">
+        <li class="on"><a href="#rank" id="by_rank">按有用程度</a></li>
+        <li><a href="#page" id="by_page">按页码先后</a></li>
+        <li><a href="#time" id="by_time">最新笔记</a></li>
+      </ul>
+      
+  <ul class="comments by_rank" >
+      
+      <li class="ctsh clearfix" data-cid="92382386">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/book456/"><img src="https://img2.doubanio.com/icon/u51549668-3.jpg" alt="在豆瓣" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/92382386/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/92382386/" class="">saver在tensorflow中的位置</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/book456/" class=" " title="在豆瓣">在豆瓣</a>
+              
+            </p>
+            <div class="reading-note" data-cid="92382386">
+              <div class="short">
+                
+                  <span class="">server入口为tf.train.Saver，负责将tensorflow计算图以文件结构保存到存储系统或从存储系统恢复到计算图。对上对接session会话系统，对下对接存储系统。</span>
+                <p class="pl">
+                  <span class="">2020-02-01 22:03:55</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p data-page="0">server入口为tf.train.Saver，负责将tensorflow计算图以文件结构保存到存储系统或从存储系统恢复到计算图。对上对接session会话系统，对下对接存储系统。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/92382386/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2020-02-01 22:03:55
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="57258727">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/71430604/"><img src="https://img2.doubanio.com/icon/u71430604-1.jpg" alt="十三少" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/57258727/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/57258727/" class="">第57页 4 TensorFlow实现自编码器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/71430604/" class=" " title="十三少">十三少</a>
+              
+            </p>
+            <div class="reading-note" data-cid="57258727">
+              <div class="short">
+                
+                  <span class="">自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。</span>
+                <p class="pl">
+                  <span class="">2018-06-02 11:19:58</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <figure>自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。<figcaption>引自 4 TensorFlow实现自编码器及多层感知机</figcaption></figure><p></p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/57258727/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2018-06-02 11:19:58
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="48348451">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/46011437/"><img src="https://img2.doubanio.com/icon/u46011437-2.jpg" alt="薛定谔的熊" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/48348451/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/48348451/" class="">196</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/46011437/" class=" " title="薛定谔的熊">薛定谔的熊</a>
+              
+                <span class="allstar50" title="力荐"></span>
+            </p>
+            <div class="reading-note" data-cid="48348451">
+              <div class="short">
+                
+                  <span class="">书中强化学习部分的内容是参考这部分blog的，墙内的朋友们可能打不开，不过能上github的的话，有github的地址，书中只选了两个例子，可以参考一下其他的例子。 [https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0] [https://github.com/awjuliani/DeepRL-Agents]</span>
+                <p class="pl">
+                  <span class="">2017-09-26 17:02:39</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>书中强化学习部分的内容是参考这部分blog的，墙内的朋友们可能打不开，不过能上github的的话，有github的地址，书中只选了两个例子，可以参考一下其他的例子。</p><p><a class="link" href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0" rel="nofollow" target="_blank">https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0</a></p><p><a class="link" href="https://github.com/awjuliani/DeepRL-Agents" rel="nofollow" target="_blank">https://github.com/awjuliani/DeepRL-Agents</a></p><p></p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/48348451/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-09-26 17:02:39
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="43992333">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/159202867/"><img src="https://img2.doubanio.com/icon/u159202867-1.jpg" alt="ichaobuster" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/43992333/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/43992333/" class="">第66页 TensorFlow 实现自编码器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/159202867/" class=" " title="ichaobuster">ichaobuster</a>
+              
+                <span class="allstar30" title="还行"></span>
+            </p>
+            <div class="reading-note" data-cid="43992333">
+              <div class="short">
+                
+                  <span class="">先对数据进行无监督的学习，提取到一些有用的特征，将神经网络权重初始化到一个较好的分布，然后再使用有标注的数据进行监督训练，即对权重进行fine-tune。</span>
+                <p class="pl">
+                  <span class="">2017-05-16 08:52:16</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>先对数据进行无监督的学习，提取到一些有用的特征，将神经网络权重初始化到一个较好的分布，然后再使用有标注的数据进行监督训练，即对权重进行fine-tune。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/43992333/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-05-16 08:52:16
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+  </ul>
+  
+
+      
+  <ul class="comments by_page"  style="display: none">
+      
+      <li class="ctsh clearfix" data-cid="43507056">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/159202867/"><img src="https://img2.doubanio.com/icon/u159202867-1.jpg" alt="ichaobuster" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/43507056/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/43507056/" class="">第53页 TensorFlow 第一步</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/159202867/" class=" " title="ichaobuster">ichaobuster</a>
+              
+                <span class="allstar30" title="还行"></span>
+            </p>
+            <div class="reading-note" data-cid="43507056">
+              <div class="short">
+                
+                  <div class="ll" style="margin-right: 10px;">
+                    <a href="https://book.douban.com/annotation/43507056/"><img src="https://img2.doubanio.com/view/page_note/small/public/p43507056-1.jpg"></a>
+                  </div>
+                  <span class="">简单的机器学习实现流程： 1. 定义算法公式 2. 定义loss，选定优化器，并指定优化器优化loss 3. 迭代训练 4. 在测试集或验证集上对准确率进行评测</span>
+                <p class="pl">
+                  <span class="">2017-05-01 11:02:12</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>简单的机器学习实现流程：</p><p>1. 定义算法公式</p><p>2. 定义loss，选定优化器，并指定优化器优化loss</p><p>3. 迭代训练</p><p>4. 在测试集或验证集上对准确率进行评测</p><div class="image-container image-float-center"><div class="image-wrapper"><img height="auto" src="https://img2.doubanio.com/view/page_note/xlarge/public/p43507056-1.jpg" width=""/></div></div>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/43507056/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-05-01 11:02:12
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="43507136">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/159202867/"><img src="https://img2.doubanio.com/icon/u159202867-1.jpg" alt="ichaobuster" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/43507136/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/43507136/" class="">第54页 TensorFlow 第一步</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/159202867/" class=" " title="ichaobuster">ichaobuster</a>
+              
+                <span class="allstar30" title="还行"></span>
+            </p>
+            <div class="reading-note" data-cid="43507136">
+              <div class="short">
+                
+                  <span class="">仔细设计的神经网络都可以取得比其他算法更好的准确率和泛化性，前提是有足够多的数据。</span>
+                <p class="pl">
+                  <span class="">2017-05-01 11:07:24</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>仔细设计的神经网络都可以取得比其他算法更好的准确率和泛化性，前提是有足够多的数据。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/43507136/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-05-01 11:07:24
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="43625367">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/159202867/"><img src="https://img2.doubanio.com/icon/u159202867-1.jpg" alt="ichaobuster" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/43625367/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/43625367/" class="">第55页 TensorFlow 实现自编吗器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/159202867/" class=" " title="ichaobuster">ichaobuster</a>
+              
+                <span class="allstar30" title="还行"></span>
+            </p>
+            <div class="reading-note" data-cid="43625367">
+              <div class="short">
+                
+                  <span class="">传统机器学习任务很大程度上依赖于好的特征工程（特征提取）。</span>
+                <p class="pl">
+                  <span class="">2017-05-05 08:46:35</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>传统机器学习任务很大程度上依赖于好的特征工程（特征提取）。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/43625367/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-05-05 08:46:35
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="57258727">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/71430604/"><img src="https://img2.doubanio.com/icon/u71430604-1.jpg" alt="十三少" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/57258727/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/57258727/" class="">第57页 4 TensorFlow实现自编码器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/71430604/" class=" " title="十三少">十三少</a>
+              
+            </p>
+            <div class="reading-note" data-cid="57258727">
+              <div class="short">
+                
+                  <span class="">自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。</span>
+                <p class="pl">
+                  <span class="">2018-06-02 11:19:58</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <figure>自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。<figcaption>引自 4 TensorFlow实现自编码器及多层感知机</figcaption></figure><p></p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/57258727/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2018-06-02 11:19:58
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+  </ul>
+  
+
+      
+  <ul class="comments by_time"  style="display: none">
+      
+      <li class="ctsh clearfix" data-cid="92382386">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/book456/"><img src="https://img2.doubanio.com/icon/u51549668-3.jpg" alt="在豆瓣" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/92382386/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/92382386/" class="">saver在tensorflow中的位置</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/book456/" class=" " title="在豆瓣">在豆瓣</a>
+              
+            </p>
+            <div class="reading-note" data-cid="92382386">
+              <div class="short">
+                
+                  <span class="">server入口为tf.train.Saver，负责将tensorflow计算图以文件结构保存到存储系统或从存储系统恢复到计算图。对上对接session会话系统，对下对接存储系统。</span>
+                <p class="pl">
+                  <span class="">2020-02-01 22:03:55</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p data-page="0">server入口为tf.train.Saver，负责将tensorflow计算图以文件结构保存到存储系统或从存储系统恢复到计算图。对上对接session会话系统，对下对接存储系统。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/92382386/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2020-02-01 22:03:55
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="57258727">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/71430604/"><img src="https://img2.doubanio.com/icon/u71430604-1.jpg" alt="十三少" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/57258727/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/57258727/" class="">第57页 4 TensorFlow实现自编码器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/71430604/" class=" " title="十三少">十三少</a>
+              
+            </p>
+            <div class="reading-note" data-cid="57258727">
+              <div class="short">
+                
+                  <span class="">自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。</span>
+                <p class="pl">
+                  <span class="">2018-06-02 11:19:58</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <figure>自编码器（AutoEncoder），顾名思义，即可以使用自身高阶特征编码自己。自编码器其实也是一种神经网络，它的输入和输出是一致的，它借助稀疏编码的思想，目标是使用稀疏的一些高阶特征重新组合来重构自己。因此，它的特征非常明显：第一，期望输入/ 输出一致；第二，希望使用高阶特征来重构自己，而不只是复制像素点。<figcaption>引自 4 TensorFlow实现自编码器及多层感知机</figcaption></figure><p></p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/57258727/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2018-06-02 11:19:58
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="48348451">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/46011437/"><img src="https://img2.doubanio.com/icon/u46011437-2.jpg" alt="薛定谔的熊" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/48348451/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/48348451/" class="">196</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/46011437/" class=" " title="薛定谔的熊">薛定谔的熊</a>
+              
+                <span class="allstar50" title="力荐"></span>
+            </p>
+            <div class="reading-note" data-cid="48348451">
+              <div class="short">
+                
+                  <span class="">书中强化学习部分的内容是参考这部分blog的，墙内的朋友们可能打不开，不过能上github的的话，有github的地址，书中只选了两个例子，可以参考一下其他的例子。 [https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0] [https://github.com/awjuliani/DeepRL-Agents]</span>
+                <p class="pl">
+                  <span class="">2017-09-26 17:02:39</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>书中强化学习部分的内容是参考这部分blog的，墙内的朋友们可能打不开，不过能上github的的话，有github的地址，书中只选了两个例子，可以参考一下其他的例子。</p><p><a class="link" href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0" rel="nofollow" target="_blank">https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0</a></p><p><a class="link" href="https://github.com/awjuliani/DeepRL-Agents" rel="nofollow" target="_blank">https://github.com/awjuliani/DeepRL-Agents</a></p><p></p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/48348451/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-09-26 17:02:39
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="ctsh clearfix" data-cid="43992333">
+        <div class="ilst">
+          <a href="https://www.douban.com/people/159202867/"><img src="https://img2.doubanio.com/icon/u159202867-1.jpg" alt="ichaobuster" class="" /></a>
+        </div>
+        <div class="con">
+          <div class="nlst">
+            <h3>
+              <div class="note-toggle rr">
+                <a href="https://book.douban.com/annotation/43992333/" class="note-unfolder">展开</a>
+                <a href="javascript:void(0);" class="note-folder">收起</a>
+              </div>
+              <a href="https://book.douban.com/annotation/43992333/" class="">第66页 TensorFlow 实现自编码器及多层感知机</a></h3>
+          </div>
+          <div class="clst">
+            <p class="user"><a href="https://www.douban.com/people/159202867/" class=" " title="ichaobuster">ichaobuster</a>
+              
+                <span class="allstar30" title="还行"></span>
+            </p>
+            <div class="reading-note" data-cid="43992333">
+              <div class="short">
+                
+                  <span class="">先对数据进行无监督的学习，提取到一些有用的特征，将神经网络权重初始化到一个较好的分布，然后再使用有标注的数据进行监督训练，即对权重进行fine-tune。</span>
+                <p class="pl">
+                  <span class="">2017-05-16 08:52:16</span>
+                </p>
+              </div>
+              <div class="all hidden" style="display:none" >
+                <p>先对数据进行无监督的学习，提取到一些有用的特征，将神经网络权重初始化到一个较好的分布，然后再使用有标注的数据进行监督训练，即对权重进行fine-tune。</p>
+                  <div class="col-rec-con clearfix">
+                    
+
+
+
+
+
+
+
+<div class="rec-sec">
+
+    <span class="rec">
+
+<a href="https://www.douban.com/accounts/register?reason=collect" class="j a_show_login lnk-sharing lnk-douban-sharing">推荐</a>
+</span>
+</div>
+
+                  </div>
+                <div class="pl col-time">
+                  <a href="https://book.douban.com/annotation/43992333/#comments" class="">回应</a>&nbsp;&nbsp;
+                  2017-05-16 08:52:16
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+  </ul>
+  
+
+    </div>
+      <div class="ft">
+        <p class="trr">&gt; <a href="https://book.douban.com/subject/26974266/annotation">更多读书笔记（共7篇）</a></p>
+      </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var TEMPL_ADD_COL = '<a href="" id="n-{NOTE_ID}" class="colbutt ll add-col"><span>收藏</span></a>',
+      TEMPL_DEL_COL = '<span class="pl">已收藏 &gt;<a href="" id="n-{NOTE_ID}" class="del-col">取消收藏</a></span>';
+
+    $('body').delegate('.add-col', 'click', function(e){
+      e.preventDefault();
+      var nnid = $(this).attr('id').split('-')[1],
+        bn_add = $(this);
+      $.post_withck("/j/book/annotation_collect",{nid:nnid},function(){
+        var a = $(TEMPL_DEL_COL.replace('{NOTE_ID}', nnid));
+        bn_add.before(a);
+        bn_add.remove();
+      })
+    });
+
+    $('body').delegate('.del-col', 'click', function(e){
+      e.preventDefault();
+      var nnid = $(this).attr('id').split('-')[1],
+        bn_del = $(this).parent();
+      $.post_withck("/j/book/annotation_uncollect", {nid: nnid}, function() {
+        var a = $(TEMPL_ADD_COL.replace('{NOTE_ID}', nnid));
+        bn_del.before(a);
+        bn_del.remove();
+      })
+    });
+
+    $("pre.source").each(function(){
+      var cn = $(this).attr('class').split(' ');
+      l = cn[1];
+      s = 'rand01';
+      n = cn[2];
+      $(this).snippet(n,{style: s, showNum: l});
+    });
+
+    var annotationMod = $('.reading-notes .bd')
+      , annotationTabs = annotationMod.find('.inline-tabs li')
+      , annotationTabLinks = annotationTabs.find('a')
+      , annotationTabContents = annotationMod.find('ul.comments');
+
+    annotationTabLinks.click(function(e){
+      e.preventDefault();
+      var el = $(this)
+        , kind = el.attr('id');
+
+      annotationTabs.removeClass('on');
+      el.parent().addClass('on');
+      annotationTabContents.hide();
+      annotationTabContents.filter('.' + kind).show();
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js","TeX/noUndefined.js"],
+    tex2jax: {
+		inlineMath: [ ["($", "$)"], ['\\(','\\)'] ],
+		displayMath: [ ["($$","$$)"], ['\\[','\\]']],
+		skipTags: ["script","noscript","style","textarea"],
+		processEscapes: true,
+		processEnvironments: true,
+		preview: "TeX"
+	},
+	showProcessingMessages: false
+  });
+</script>
+
+
+  
+    
+
+
+
+
+
+<div id="db-discussion-section" class="indent ugc-mod">
+
+
+    
+  
+
+  <h2>
+    <span>论坛</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+
+        
+<table class="olt"><tr><td><td><td><td></tr>
+        
+        <tr>
+            <td class="pl"><a href="https://book.douban.com/subject/26974266/discussion/614701978/" title="天啊，好多水军">天啊，好多水军</a></td>
+            <td class="pl"><span>来自</span><a href="https://www.douban.com/people/126660173/">拓扑</a></td>
+            <td class="pl"><span>3 回应</span></td>
+            <td class="pl"><span>2018-07-23 10:34:59</span></td>
+        </tr>
+</table>
+
+
+
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+$(function(){if($.browser.msie && $.browser.version == 6.0){
+    var maxWidth = parseInt($('#info').css('max-width'));
+    if($('#info').width() > maxWidth)
+        $('#info').width(maxWidth)
+}});
+</script>
+</div>
+      <div class="aside">
+        
+  
+  
+
+
+
+
+
+
+  <div id="dale_book_subject_top_right"></div>
+
+  
+
+
+
+
+
+
+<style type="text/css" media="screen">
+  .add2cartContainer{overflow:hidden;vertical-align:bottom;line-height:1;padding:10px 0}.add2cartContainer .add2cart{margin-right:0;display:inline-block}.buyinfo .bs{margin:0}.buyinfo .current-version-list{margin-bottom:27px}.buyinfo .secondhand-books-list{margin-top:-10px}.buyinfo .secondhand-books-list li{display:block}.buyinfo .secondhand-books-list .flex-wrap{display:flex}.buyinfo .secondhand-books-list .flex-wrap .vendor-name{flex:0 0 33%}.buyinfo .secondhand-books-list .flex-wrap .cell:last-child{width:70px;flex:initial;text-align:right}.buyinfo li{display:flex;flex-direction:column;padding:12px 0;position:relative;line-height:1;border-bottom:1px solid rgba(0,0,0,0.08)}.buyinfo li .cell{flex:1}.buyinfo li .cell:first-child a{line-height:20px}.buyinfo li .vendor-name.cell,.buyinfo li .vendor-name{flex:0 0 33%;align-self:normal;line-height:20px}.buyinfo li .price-btn-wrapper{display:flex}.buyinfo li .price-btn-wrapper>.cell{display:flex;margin-bottom:5px}.buyinfo li .price-btn-wrapper>.cell:last-child{margin-bottom:0}.buyinfo li .price-btn-wrapper>.cell .cell:last-child{padding-right:1px;width:70px;flex:initial;text-align:right}.buyinfo li .buylink-price{line-height:20px}.buyinfo li .buylink-price.promotion{color:#c34}.buyinfo li s{padding-left:2px;line-height:20px;font-family:Helvetica;font-size:11px;color:rgba(0,0,0,0.25);letter-spacing:0;vertical-align:top}.buyinfo li .publisher{color:rgba(0,0,0,0.25)}.buyinfo li .buy-book-btn{display:inline-block;height:20px;line-height:20px;width:70px;text-align:center;background:#fff;border-radius:3px;font-size:12px;box-shadow:0 0 1px 0 rgba(0,0,0,0.07)}.buyinfo li .buy-book-btn:hover{opacity:.8}.buyinfo li .secondhand-book-btn,.buyinfo li .paper-book-btn{color:#EB9108}.buyinfo li .secondhand-book-btn:hover,.buyinfo li .paper-book-btn:hover{background:#EB9108;color:#fff}.buyinfo li .e-book-btn{color:#32A998}.buyinfo li .e-book-btn:hover{background:#32A998;color:#fff}.buyinfo li .go-shopping{display:inline-block;line-height:20px;width:70px;text-align:center}.buyinfo .more-info{color:rgba(0,0,0,0.5);font-size:12px}.buyinfo .more-info.not-onsale{color:rgba(0,0,0,0.5)}.buyinfo .cell.not-onsale .more-info{line-height:20px}.buyinfo-printed{margin-bottom:15px}.buyinfo-printed.no-border{border-bottom:0}.buyinfo-printed .presale-indicator{margin:0;width:auto;text-indent:0;background:none;color:rgba(0,0,0,0.5)}.gray_ad{padding:18px 16px;background:#F6F6F2}.gray_ad h2{margin-bottom:10px;font-size:15px;color:#0B7C2A}.gray_ad .ebook-tag{margin-top:5px;color:#999;font-size:12px}
+
+  .presale-indicator {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 24px;
+  height: 15px;
+  line-height: 15px;
+  background: url(https://img3.doubanio.com/f/book/1679c65572eac1371f9872807199dea6e55a7f06/pics/book/cart/presale_text.gif) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+  *vertical-align: 0px;
+  _vertical-align: 2px;
+  margin-left: 0.5em;
+}
+
+</style>
+
+  <div class="gray_ad buyinfo" id="buyinfo">
+      <div class="buyinfo-printed" id="buyinfo-printed">
+        
+
+          
+  
+
+  <h2>
+    <span>当前版本有售</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+          
+  <ul class="bs current-version-list">
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6870&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEQdWH18SCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQESBFEfXBwdS0IJRmtQZntSCF4jXWFqHVYbXhcYegYXZFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUBpeEAIbD1ErXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWAhEDURxSCltXWwg%253D&amp;cntvendor=3&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=jingdong&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>京东商城</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26974266&amp;isbn=7121309122&amp;source=jingdong&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6870&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEQdWH18SCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQESBFEfXBwdS0IJRmtQZntSCF4jXWFqHVYbXhcYegYXZFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUBpeEAIbD1ErXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWAhEDURxSCltXWwg%253D&amp;cntvendor=3&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=jingdong&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        68.70元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=jingdong&amp;srcpage=subject&amp;price=6870&amp;pos=1&amp;url=http%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D%26p%3DAyIOZR5aEQISA1AYUyUCEQdWH18SCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQESBFEfXBwdS0IJRmtQZntSCF4jXWFqHVYbXhcYegYXZFxTDh43Uh5cEwUbBFIrWxEDFgNlK1sUMkBpja3tzaejG4Gx1MCKhTdUK1sQCxsDUBpeEAIbD1ErXCXbkrCDucnMnJjS3YxrJTIi%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsWAhEDURxSCltXWwg%253D&amp;cntvendor=3&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=jingdong&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=4350&amp;pos=2&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7424008.htm&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=bookschina&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>中图网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26974266&amp;isbn=7121309122&amp;source=bookschina&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=4350&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7424008.htm&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=bookschina&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        43.50元
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=bookschina&amp;srcpage=subject&amp;price=4350&amp;pos=1&amp;url=http%3A%2F%2Fwww.bookschina.com%2Funion%2Fubook.asp%3Fadservice%3D354872%26tourl%3Dhttp%3A%2F%2Fwww.bookschina.com%2F7424008.htm&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=bookschina&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+      
+      <li>
+        
+
+            
+              <div class="cell price-btn-wrapper">
+                <div class="vendor-name">
+                  <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=kongfz&amp;srcpage=subject&amp;price=387&amp;pos=3&amp;url=http%3A%2F%2Fitem.kongfz.com%2Fbook%2F59490338.html%3Fpush_type%3D5%26min_price%3D3.87%26utm_source%3D101004009001&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=kongfz&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                    <span>孔网</span>
+                  </a>
+                </div>
+
+                <div class="cell impression_track_mod_buyinfo" data-track="https://frodo.douban.com/rohirrim/tracking/impression?subject_id=26974266&amp;isbn=7121309122&amp;source=kongfz&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject">
+                  <div class="cell price-wrapper">
+                    <a target="_blank" href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=kongfz&amp;srcpage=subject&amp;price=387&amp;pos=1&amp;url=http%3A%2F%2Fitem.kongfz.com%2Fbook%2F59490338.html%3Fpush_type%3D5%26min_price%3D3.87%26utm_source%3D101004009001&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=kongfz&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span class="buylink-price ">
+                        
+                        3.87元起
+                      </span>
+                    </a>
+
+                  </div>
+
+                  <div class="cell">
+                    <a href="https://book.douban.com/link2/?lowest=387&amp;pre=0&amp;vendor=kongfz&amp;srcpage=subject&amp;price=387&amp;pos=1&amp;url=http%3A%2F%2Fitem.kongfz.com%2Fbook%2F59490338.html%3Fpush_type%3D5%26min_price%3D3.87%26utm_source%3D101004009001&amp;cntvendor=3&amp;link2key=a1e3375132&amp;srcsubj=26974266&amp;type=bkbuy&amp;subject=26974266" class="buy-book-btn paper-book-btn" onclick="track('https://frodo.douban.com/rohirrim/tracking/click?subject_id=26974266&amp;isbn=7121309122&amp;source=kongfz&amp;user_id=&amp;bid=xbqlJwIOMkA&amp;platform=pc&amp;location=vendor_subject')">
+                      
+                      <span>购买纸质书</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+                
+  
+
+      </li>
+  </ul>
+
+
+      </div>
+      
+  <div class="add2cartContainer no-border">
+    
+  <span class="add2cartWidget ll">
+      <a class="j  add2cart a_show_login" href="https://www.douban.com/accounts/passport/login?source=book" rel="nofollow">
+        <span>+ 加入购书单</span></a>
+  </span>
+  
+
+  </div>
+
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $('.impression_track_mod_buyinfo').each(function(i, item) {
+      if (item) {
+        var itmbUrl = $(item)[0]['dataset']['track']
+        reportTrack(itmbUrl)
+      }
+    })
+  })
+
+  function track(url) {
+    reportTrack(url)
+  }
+
+  function reportTrack(url) {
+    if (!url) { return false }
+    $.ajax({ url: url, dataType: 'text/html' })
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+  
+
+<style type="text/css" media="screen">
+  .version_works h2{margin-bottom:20px}.version_works li.mb8{display:flex;flex-direction:column;padding-bottom:10px}.version_works li.mb8:last-child{padding-bottom:0;margin-bottom:0}.version_works .meta-wrapper{justify-content:space-between;display:flex}.version_works .meta-wrapper .count span{padding-right:10px}.version_works .buyinfo{display:flex;flex-direction:column;margin-top:10px;background:rgba(255,255,255,0.7)}.version_works .buyinfo li{padding:10px}.version_works .current-version-list{margin-bottom:0}.version_works .secondhand-books-list{margin:0}
+
+</style>
+
+
+
+
+  <div id="dale_book_subject_top_middle"></div>
+  
+
+
+
+
+
+
+  
+    
+
+
+
+  
+  
+
+  <h2>
+    <span>以下书单推荐</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+      <span class="pl">&nbsp;(
+          <a href="https://book.douban.com/subject/26974266/doulists">全部</a>
+        ) </span>
+
+  </h2>
+
+
+  <div id="db-doulist-section" class="indent">
+    <ul class="bs">
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/1262830/" target="_blank">机器学习 &amp; 数据挖掘</a>
+                <span class="pl">(海)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/3084253/" target="_blank">我书架上的书</a>
+                <span class="pl">(yifan254)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/49178037/" target="_blank">Machine Learning for Beginners</a>
+                <span class="pl">(Reed)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/46420773/" target="_blank">计算机视觉算法工程师必看书单</a>
+                <span class="pl">(最难不过二叉树)</span>
+            </li>
+          
+            <li class=""><a class="" href="https://www.douban.com/doulist/45969426/" target="_blank">Lab214书单</a>
+                <span class="pl">(Sunnie)</span>
+            </li>
+    </ul>
+  </div>
+
+  <div id="dale_book_subject_middle_mini"></div>
+  
+    
+
+
+
+
+
+<h2>谁读这本书?</h2>
+<div id="collector">
+  
+
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/228661603/"><img src="https://img2.doubanio.com/icon/u228661603-1.jpg" alt="灯" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/228661603/">灯</a><br/>
+      <div class="pl ll">          7月28日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/danjiang/"><img src="https://img9.doubanio.com/icon/u3018021-44.jpg" alt="但江" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/danjiang/">但江</a><br/>
+      <div class="pl ll">          7月22日          想读      </div>
+
+      <br/>
+
+      <span class="pl">tags:CS-蓝-人工智能</span><br />
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/218146020/"><img src="https://img2.doubanio.com/icon/u218146020-2.jpg" alt="告丆゛" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/218146020/">告丆゛</a><br/>
+      <div class="pl ll">          5月10日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+<div>
+    
+    <div class="ll"><a href="https://www.douban.com/people/180559018/"><img src="https://img2.doubanio.com/icon/u180559018-1.jpg" alt="从没有出现莺" /></a></div>
+    <div style="padding-left:60px"><a href="https://www.douban.com/people/180559018/">从没有出现莺</a><br/>
+      <div class="pl ll">          3月3日          想读      </div>
+
+      <br/>
+
+    </div>
+    <div class="clear"></div><br/>
+    <div class="ul" style="margin-bottom:12px;"></div>
+</div>
+
+
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26974266/comments?status=N">95人在读</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26974266/comments?status=P">203人读过</a></p>
+      <p class="pl">&gt; <a href="https://book.douban.com/subject/26974266/comments?status=F">373人想读</a></p>
+
+</div>
+
+
+
+
+
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_middle_right"></div>
+<script type="text/javascript">
+    (function (global) {
+        if(!document.getElementsByClassName) {
+            document.getElementsByClassName = function(className) {
+                return this.querySelectorAll("." + className);
+            };
+            Element.prototype.getElementsByClassName = document.getElementsByClassName;
+
+        }
+        var articles = global.document.getElementsByClassName('article'),
+            asides = global.document.getElementsByClassName('aside');
+
+        if (articles.length > 0 && asides.length > 0 && articles[0].offsetHeight >= asides[0].offsetHeight) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_middle_right');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+  
+    
+
+
+
+
+
+<h2>
+  二手市场
+</h2>
+<div class="indent">
+  <ul class="bs">
+  <li class="">
+        <a class="rr j a_show_login" href="https://www.douban.com/register?reason=secondhand-offer&amp;cat=book"><span>在豆瓣转让</span></a>
+
+      有373人想读,手里有一本闲着?
+    </li>
+    <li>
+      <div class="rr">
+        <a href="https://shoushu.kongfz.com/?utm_source=douban&utm_medium=new_offer">孔网上门收书</a>
+      </div>
+      转让给其他二手平台？
+    </li>
+  </ul>
+</div>
+
+  
+<p class="pl">订阅关于TensorFlow实战的评论: <br/><span class="feed">
+    <a href="https://book.douban.com/feed/subject/26974266/reviews"> feed: rss 2.0</a></span></p>
+
+
+      </div>
+      <div class="extra">
+        
+  
+<!-- douban ad begin -->
+<div id="dale_book_subject_bottom_super_banner"></div>
+<script type="text/javascript">
+    (function (global) {
+        var body = global.document.body,
+            html = global.document.documentElement;
+
+        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        if (height >= 2000) {
+            (global.DoubanAdSlots = global.DoubanAdSlots || []).push('dale_book_subject_bottom_super_banner');
+        }
+    })(this);
+</script>
+<!-- douban ad end -->
+
+
+      </div>
+    </div>
+  </div>
+
+        
+<div id="footer">
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=book" target="_blank">帮助中心</a>
+    · <a href="https://book.douban.com/library_invitation">图书馆合作</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+    </div>
+      
+
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/7dccdcfb50652052.js"></script>
+    <!-- mako -->
+    
+  
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '',
+            browserId = 'xbqlJwIOMkA',
+            criteria = '7:TensorFlow|7:深度学习|7:机器学习|7:人工智能|7:计算机|7:技术|7:编程|7:深度学习，人工智能，强化学习，深入浅出，通俗易懂|7:技术帝|7:技能|3:/subject/26974266/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_book_subject_top_icon', 'dale_book_subject_top_right', 'dale_book_subject_top_middle', 'dale_book_subject_middle_mini'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/MnJwNGlleS9mL2FkanMvY2M1OGQyNTQ2N2I2YmQzOTlmNTliMGJiMjI4MWRhZTlkNTNjYTFkZC9hZC5yZWxlYXNlLmpz');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-16', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id])
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-book--default-84c4898f79-bs4x7-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
