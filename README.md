@@ -53,8 +53,8 @@ npm start
 
 ##### Header 参数  
 
-| 参数名       | 必选 | 类型/参数值      | 说明         |
-| ------------ | ---- | ---------------- | ------------ |
+| 参数名          | 必选  | 类型/参数值           | 说明     |
+|--------------|-----|------------------|--------|
 | Content-Type | 是   | application/json | 请求参数类型 |
 
 #### 返回示例
@@ -140,8 +140,8 @@ npm start
 
 ##### Header 参数  
 
-| 参数名       | 必选 | 类型/参数值      | 说明         |
-| ------------ | ---- | ---------------- | ------------ |
+| 参数名          | 必选  | 类型/参数值           | 说明     |
+|--------------|-----|------------------|--------|
 | Content-Type | 是   | application/json | 请求参数类型 |
 
 #### 返回示例
@@ -165,7 +165,7 @@ npm start
     "publishDate": "2016-10",
     "pages": "650",
     "price": "98.00元",
-    "binging": "精装",
+    "binding": "精装",
     "series": "",
     "book_intro": "《政治的逻辑》是高校社会科学....",
     "author_intro": "王沪宁，复旦大学政治学教授...",
@@ -193,7 +193,7 @@ npm start
       "content": "中国马克思主义的集大成..."
       }],
     "reviews": [{
-      "user_avator": "https://img1.doubanio.com/icon/u1566359-9.jpg",
+      "user_avatar": "https://img1.doubanio.com/icon/u1566359-9.jpg",
       "user_name": "月之仙者",
       "user_page": "https://www.douban.com/people/yuezhixianzhe/",
       "rating": 3,
@@ -203,7 +203,7 @@ npm start
       "title": "政治的逻辑：马克思主义政治学原理",
       "url": "https://book.douban.com/review/1463309/",
       "short_content": "经过十天左右的时间终于看完了...",
-      "usefull_count": 53,
+      "useful_count": 53,
       "useless_count": 2,
       "reply_count": 8
     }],
@@ -219,60 +219,60 @@ npm start
 
 #### 数据格式
 
-|首级标签|次级标签|三级标签|名称|类型|示例|备注|
-|------|-------|-------|---|---|---|---|
-|title|||标题|string|"政治的逻辑"||
-|subtitle|||副标题|string|"马克思主义政治原理"||
-|original_title|||原标题|string||适用于译著|
-|id|||豆瓣 id|string|"27012117"||
-|author|||作者|string[]|["王沪宁", "林尚立", "孙关宏"]|顺序与豆瓣页面一致, 不进行排序|
-|translator|||译者|string[]|[]|顺序与豆瓣页面一致, 不进行排序|
-|publish|||出版社|string|"上海人民出版社"||
-|producer|||出品方|string|""||
-|publishDate|||出版年|string|"2016-10"||
-|pages|||页数|string|"650"||
-|price|||定价|string|"98.00元"||
-|binging|||装帧|string|"精装"||
-|series|||丛书|string|""||
-|book_intro|||内容简介|string|"《政治的逻辑》是.."||
-|author_intro|||作者简介|string|"王沪宁，复旦大学..."||
-|catalog|||目录|string[]|["序言", "..."]||
-|original_texts|||原文摘录|string[]|["阶级消亡..."]||
-|labels|||标签|string[]|["政治学","马克思主义"]||
-|cover_url|||封面地址|string|"https://img2.doubanio.com/view/subject/l/public/s29602841.jpg"|![](https://img2.doubanio.com/view/subject/l/public/s29602841.jpg)|
-|url|||豆瓣页面地址|string|"https://book.douban.com/subject/27012117/"|[政治的逻辑 (豆瓣)](https://book.douban.com/subject/27012117/)|
-|rating|||豆瓣评分|object|||
-||count||评分人数|number|176||
-||info||评分信息| "" \| "目前无人评价" \| "评价人数不足"|""|当评分不足时, 此项不为空|
-||value||分数|number|8.7||
-||five_star_pre||五星占比|number|53.4|百分数|
-||four_star_pre||四星占比|number|33|百分数|
-||three_star_pre||三星占比|number|8|百分数|
-||two_star_pre||二星占比|number|2.8|百分数|
-||one_star_pre||一行占比|number|2.8|百分数|
-|comments|||短评|object[]||该项为数组, 包括最新短评与热门短评, 短评有字数限制|
-||vote||有用数|number|1||
-||user_name||用户昵称|string|"乔治 ♘"||
-||user_page||用户主页|string|"https://www.douban.com/people/165208204/"|[乔治 ♘](https://www.douban.com/people/165208204/)|
-||rating||评分|number|4||
-||date||日期|string|"2021-04-07"||
-||content||内容|string|"中国马克思主义..."||
-|reviews|||书评|object[]||此项为数组, 包含热门书评与最新书评|
-||user_avator||用户头像|string|"https://img2.doubanio.com/icon/u176380444-1.jpg"|![](https://img2.doubanio.com/icon/u176380444-1.jpg)|
-||user_name||用户昵称|string|"东风一号"||
-||user_page||用户主页|string|"https://www.douban.com/people/176380444/"|[东风一号](https://www.douban.com/people/176380444/)|
-||rating||评分|number|4||
-||time||日期|string|"2018-04-27 00:35:23"||
-||publisher||版本|string|"上海人民出版社2004版"|同一本书不同版本下的书评, 如果该项为空, 则说明用户所读的是当前版本|
-||publisher_page||对应版本页面|string|"https://book.douban.com/subject/1003659/"|[政治的逻辑 (豆瓣)](https://book.douban.com/subject/1003659/)|
-||title||标题|string|"王沪宁《政治的逻辑》读后感"||
-||url||书评链接|string|"https://book.douban.com/review/9320713/"|[王沪宁《政治的逻辑》读后感（政治的逻辑）书评](https://book.douban.com/review/9320713/)|
-||short_content||书评摘要|string|"花了十几天的时间终于..."||
-||usefull_count||有用数|number|16||
-||useless_count||没用数|number|1||
-||reply_count||回应数|number|2||
-|notes|||读书笔记|object[]||开发中...|
-|discussion|||论坛|object[]||开发中...|
+| 首级标签           | 次级标签   | 三级标签     | 名称                                                              | 类型                                                                 | 示例  | 备注  |
+|----------------|--------|----------|-----------------------------------------------------------------|--------------------------------------------------------------------|-----|-----|
+| title          ||| 标题     | string   | "政治的逻辑"                                                         ||
+| subtitle       ||| 副标题    | string   | "马克思主义政治原理"                                                     ||
+| original_title ||| 原标题    | string   || 适用于译著                                                           |
+| id             ||| 豆瓣 id  | string   | "27012117"                                                      ||
+| author         ||| 作者     | string[] | ["王沪宁", "林尚立", "孙关宏"]                                           | 顺序与豆瓣页面一致, 不进行排序                                                   |
+| translator     ||| 译者     | string[] | []                                                              | 顺序与豆瓣页面一致, 不进行排序                                                   |
+| publish        ||| 出版社    | string   | "上海人民出版社"                                                       ||
+| producer       ||| 出品方    | string   | ""                                                              ||
+| publishDate    ||| 出版年    | string   | "2016-10"                                                       ||
+| pages          ||| 页数     | string   | "650"                                                           ||
+| price          ||| 定价     | string   | "98.00元"                                                        ||
+| binding        ||| 装帧     | string   | "精装"                                                            ||
+| series         ||| 丛书     | string   | ""                                                              ||
+| book_intro     ||| 内容简介   | string   | "《政治的逻辑》是.."                                                    ||
+| author_intro   ||| 作者简介   | string   | "王沪宁，复旦大学..."                                                   ||
+| catalog        ||| 目录     | string[] | ["序言", "..."]                                                   ||
+| original_texts ||| 原文摘录   | string[] | ["阶级消亡..."]                                                     ||
+| labels         ||| 标签     | string[] | ["政治学","马克思主义"]                                                 ||
+| cover_url      ||| 封面地址   | string   | "https://img2.doubanio.com/view/subject/l/public/s29602841.jpg" | ![](https://img2.doubanio.com/view/subject/l/public/s29602841.jpg) |
+| url            ||| 豆瓣页面地址 | string   | "https://book.douban.com/subject/27012117/"                     | [政治的逻辑 (豆瓣)](https://book.douban.com/subject/27012117/)            |
+| rating         ||| 豆瓣评分   | object   |||
+|| count          || 评分人数   | number   | 176                                                             ||
+|| info           || 评分信息   | "" \     | "目前无人评价" \                                                      | "评价人数不足"                                                           |""|当评分不足时, 此项不为空|
+|| value          || 分数     | number   | 8.7                                                             ||
+|| five_star_pre  || 五星占比   | number   | 53.4                                                            | 百分数                                                                |
+|| four_star_pre  || 四星占比   | number   | 33                                                              | 百分数                                                                |
+|| three_star_pre || 三星占比   | number   | 8                                                               | 百分数                                                                |
+|| two_star_pre   || 二星占比   | number   | 2.8                                                             | 百分数                                                                |
+|| one_star_pre   || 一行占比   | number   | 2.8                                                             | 百分数                                                                |
+| comments       ||| 短评     | object[] || 该项为数组, 包括最新短评与热门短评, 短评有字数限制                                     |
+|| vote           || 有用数    | number   | 1                                                               ||
+|| user_name      || 用户昵称   | string   | "乔治 ♘"                                                          ||
+|| user_page      || 用户主页   | string   | "https://www.douban.com/people/165208204/"                      | [乔治 ♘](https://www.douban.com/people/165208204/)                   |
+|| rating         || 评分     | number   | 4                                                               ||
+|| date           || 日期     | string   | "2021-04-07"                                                    ||
+|| content        || 内容     | string   | "中国马克思主义..."                                                    ||
+| reviews        ||| 书评     | object[] || 此项为数组, 包含热门书评与最新书评                                              |
+|| user_avatar    || 用户头像   | string   | "https://img2.doubanio.com/icon/u176380444-1.jpg"               | ![](https://img2.doubanio.com/icon/u176380444-1.jpg)               |
+|| user_name      || 用户昵称   | string   | "东风一号"                                                          ||
+|| user_page      || 用户主页   | string   | "https://www.douban.com/people/176380444/"                      | [东风一号](https://www.douban.com/people/176380444/)                   |
+|| rating         || 评分     | number   | 4                                                               ||
+|| time           || 日期     | string   | "2018-04-27 00:35:23"                                           ||
+|| publisher      || 版本     | string   | "上海人民出版社2004版"                                                  | 同一本书不同版本下的书评, 如果该项为空, 则说明用户所读的是当前版本                                |
+|| publisher_page || 对应版本页面 | string   | "https://book.douban.com/subject/1003659/"                      | [政治的逻辑 (豆瓣)](https://book.douban.com/subject/1003659/)             |
+|| title          || 标题     | string   | "王沪宁《政治的逻辑》读后感"                                                 ||
+|| url            || 书评链接   | string   | "https://book.douban.com/review/9320713/"                       | [王沪宁《政治的逻辑》读后感（政治的逻辑）书评](https://book.douban.com/review/9320713/)  |
+|| short_content  || 书评摘要   | string   | "花了十几天的时间终于..."                                                 ||
+|| useful_count   || 有用数    | number   | 16                                                              ||
+|| useless_count  || 没用数    | number   | 1                                                               ||
+|| reply_count    || 回应数    | number   | 2                                                               ||
+| notes          ||| 读书笔记   | object[] || 开发中...                                                          |
+| discussion     ||| 论坛     | object[] || 开发中...                                                          |
 
 ## 缓存
 

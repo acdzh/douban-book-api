@@ -13,7 +13,7 @@ const data = {
   publishDate: '2021-5',
   pages: '187',
   price: '30.00',
-  binging: '平装',
+  binding: '平装',
   series: '',
   book_intro: '',
   author_intro: '',

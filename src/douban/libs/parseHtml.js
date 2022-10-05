@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 
-String.prototype.remove = function(...strs) {
+String.prototype.remove = function (...strs) {
   let _this = this;
   strs.forEach(str => {
     _this = _this.replace(new RegExp(str, 'g'), '');
@@ -12,7 +12,7 @@ function toArray(obj) {
   if (typeof obj === 'undefined') {
     return [];
   }
-  if(Array.isArray(obj)) {
+  if (Array.isArray(obj)) {
     return obj;
   } else {
     return [obj];
@@ -24,8 +24,8 @@ function getLinkingData($) {
   try {
     const linkingData = JSON.parse(cheerioScriptJsonLinkingDataEleText);
     const author = linkingData.author.map(item => item.name);
-    const { name: title, url, isbn } = linkingData;
-    return { title, url, isbn, author };
+    const {name: title, url, isbn} = linkingData;
+    return {title, url, isbn, author};
   } catch {
     return {};
   }
@@ -105,11 +105,11 @@ function getRating($) {
     one_star_pre: 0,
   };
   const cheerioDivRatingSumEleSpanEle = $('div.rating_sum>span');
-  if(cheerioDivRatingSumEleSpanEle.length === 0) return rating; // 评分被和谐
+  if (cheerioDivRatingSumEleSpanEle.length === 0) return rating; // 评分被和谐
   const cheerioDivRatingSumEleSpanEleText = cheerioDivRatingSumEleSpanEle.text().remove('\n', ' ');
   const divRatingSumEleSpanEle = cheerioDivRatingSumEleSpanEle[0];
   if (cheerioDivRatingSumEleSpanEleText === '目前无人评价') {
-    rating.info ='目前无人评价';
+    rating.info = '目前无人评价';
     return rating;
   }
   if (cheerioDivRatingSumEleSpanEleText === '评价人数不足') {
@@ -143,7 +143,14 @@ function getComments($) {
     comment.user_page = commentUserAEle.attribs.href;
 
     const commentUserStarsSpanELe = cheerioCommentInfoELe.find('span.user-stars')[0];
-    comment.rating = { 力荐: 5, 推荐: 4, 还行: 3, 较差: 2, 很差: 1, 不存在: 0 }[commentUserStarsSpanELe?.attribs?.title || '不存在'];
+    comment.rating = {
+      力荐: 5,
+      推荐: 4,
+      还行: 3,
+      较差: 2,
+      很差: 1,
+      不存在: 0
+    }[commentUserStarsSpanELe?.attribs?.title || '不存在'];
 
     const commentTimeSpanEle = cheerioCommentInfoELe.find('a.comment-time')[0];
     comment.date = commentTimeSpanEle?.children[0].data || '';
@@ -161,8 +168,8 @@ function getReviews($) {
     const cheerioMainHdHeaderEle = cheerioReviewEle.children('header.main-hd');
     const cheerioMainBdDivEle = cheerioReviewEle.children('div.main-bd');
 
-    const avatorImgEle = cheerioMainHdHeaderEle.find('a.avator>img')[0];
-    review.user_avator = avatorImgEle.attribs.src;
+    const avatarImgEle = cheerioMainHdHeaderEle.find('a.avator>img')[0]; // a.avator>img is not a mistake
+    review.user_avatar = avatarImgEle.attribs.src;
 
     const nameAEle = cheerioMainHdHeaderEle.children('a.name')[0];
     review.user_name = nameAEle.children[0].data;
@@ -183,14 +190,14 @@ function getReviews($) {
     review.url = titleAEle.attribs.href;
 
     const shortContentDivEle = cheerioMainBdDivEle.find('div.short-content')[0];
-    review.short_content = shortContentDivEle.children.filter(c => c.type ==='text').map(e => e.data).join('')
+    review.short_content = shortContentDivEle.children.filter(c => c.type === 'text').map(e => e.data).join('')
       .remove('\n', ' ').slice(0, -3);
 
-    const rUsefullCountSpanEle = cheerioMainBdDivEle.find('span[id^="r-useful_count"]')[0];
+    const rUsefulCountSpanEle = cheerioMainBdDivEle.find('span[id^="r-useful_count"]')[0];
     const rUselessCountSpanEle = cheerioMainBdDivEle.find('span[id^="r-useless_count"]')[0];
-    review.usefull_count = parseInt(rUsefullCountSpanEle.children[0].data.remove('\n', ' ') || '0');
+    review.useful_count = parseInt(rUsefulCountSpanEle.children[0].data.remove('\n', ' ') || '0');
     review.useless_count = parseInt(rUselessCountSpanEle.children[0].data.remove('\n', ' ') || '0');
-    
+
     const replyAEle = cheerioMainBdDivEle.find('a.reply')[0];
     review.reply_count = parseInt(replyAEle.children[0].data.slice(0, -2));
     return review;
@@ -209,7 +216,7 @@ function parseHTML(html, id) {
   const linkingData = getLinkingData($);
 
   if (!id) {
-    id = /douban\.com\/book\/subject\/([\d]+)\//.exec(html)[1];
+    id = /douban\.com\/book\/subject\/(\d+)\//.exec(html)[1];
   }
   return {
     title: getTitle($),
@@ -224,7 +231,7 @@ function parseHTML(html, id) {
     publishDate: info.出版年 || '',
     pages: info.页数 || 0,
     price: info.定价 || '',
-    binging: info.装帧 || '',
+    binding: info.装帧 || '',
     series: info.丛书 || '',
     // TODO: intro bugs
     book_intro: getBookIntro($),
@@ -244,7 +251,7 @@ function parseHTML(html, id) {
 module.exports = parseHTML;
 
 if (require.main === module) {
-  const html = require('fs').readFileSync('.cache/html/id/26807576.html', { encoding: 'utf8' });
+  const html = require('fs').readFileSync('.cache/html/id/26807576.html', {encoding: 'utf8'});
   const result = parseHTML(html);
   // require('fs').writeFileSync(`./.cache/result-3221090.json`, JSON.stringify(result, null, 2));
   console.log(result.book_intro);

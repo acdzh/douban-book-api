@@ -12,7 +12,7 @@ const data = {
   publishDate: '2017-2-1',
   pages: '316',
   price: '79',
-  binging: '平装',
+  binding: '平装',
   series: '博文视点AI系列',
   book_intro: 'Google近日发布了TensorFlow 1.0候选版，这个稳定版将是深度学习框架发展中的里程碑的一步。自TensorFlow于2015年底正式开源，距今已有一年多，这期间TensorFlow不断给人以惊喜，推出了分布式版本，服务框架TensorFlow Serving，可视化工具TensorFlow，上层封装TF.Learn，其他语言（Go、Java、Rust、Haskell）的绑定、Windows的支持、JIT编译器XLA、动态计算图框架Fold，以及数不胜数的经典模型在TensorFlow上的实现（Inception Net、SyntaxNet等）。在这一年多时间，TensorFlow已从初入深度学习框架大战的新星，成为了几近垄断的行业事实标准。\n《TensorFlow实战》希望用简单易懂的语言带领大家探索TensorFlow（基于1.0版本...',
   author_intro: 'Google近日发布了TensorFlow 1.0候选版，这个稳定版将是深度学习框架发展中的里程碑的一步。自TensorFlow于2015年底正式开源，距今已有一年多，这期间TensorFlow不断给人以惊喜，推出了分布式版本，服务框架TensorFlow Serving，可视化工具TensorFlow，上层封装TF.Learn，其他语言（Go、Java、Rust、Haskell）的绑定、Windows的支持、JIT编译器XLA、动态计算图框架Fold，以及数不胜数的经典模型在TensorFlow上的实现（Inception Net、SyntaxNet等）。在这一年多时间，TensorFlow已从初入深度学习框架大战的新星，成为了几近垄断的行业事实标准。\n《TensorFlow实战》希望用简单易懂的语言带领大家探索TensorFlow（基于1.0版本API）。在《TensorFlow实战》中我们讲述了TensorFlow的基础原理，TF和其他框架的异同。并用具体的代码完整地实现了各种类型的深度神经网络：AutoEncoder、MLP、CNN（AlexNet，VGGNet，Inception Net，ResNet）、Word2Vec、RNN（LSTM，Bi-RNN）、Deep Reinforcement Learning(Policy Network、Value Network)。此外，《TensorFlow实战》还讲解了TensorBoard、多GPU并行、分布式并行、TF.Learn和其他TF.Contrib组件。《TensorFlow实战》希望能帮读者快速入门TensorFlow和深度学习，在工业界或者研究中快速地将想法落地为可实践的模型。',

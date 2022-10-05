@@ -31,7 +31,7 @@ const getJSON = (url, callback) => {
     method: 'GET',
     url: url,
     headers: {
-      'Accept': 'application/json'
+      Accept: 'application/json'
     },
     onload: function (response) {
       if (response.status >= 200 && response.status < 400) {
@@ -49,7 +49,7 @@ const postJSON = (url, data, callback) => {
     url: url,
     data: JSON.stringify(data),
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json'
     },
     onload: function (response) {

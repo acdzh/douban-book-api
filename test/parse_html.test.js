@@ -7,7 +7,7 @@ const keys = [
   'translator',     'publish',       
   'producer',       'publishDate',   
   'pages',          'price',
-  'binging',        'series',        
+  'binding',        'series',
   'book_intro',     'author_intro',  
   'catalog',        'cover_url',     
   'url',
