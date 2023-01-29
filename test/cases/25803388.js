@@ -300,11 +300,11 @@ const data = {
     count: 274,
     info: '',
     value: 8.9,
-    five_star_pre: 51.1,
-    four_star_pre: 42.3,
-    three_star_pre: 5.1,
-    two_star_pre: 1.1,
-    one_star_pre: 0.4
+    five_star_per: 51.1,
+    four_star_per: 42.3,
+    three_star_per: 5.1,
+    two_star_per: 1.1,
+    one_star_per: 0.4
   },
   comments: [],
   reviews: [],

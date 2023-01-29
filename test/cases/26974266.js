@@ -25,11 +25,11 @@ const data = {
     count: 237,
     info: '',
     value: 7.2,
-    five_star_pre: 38,
-    four_star_pre: 21.9,
-    three_star_pre: 26.6,
-    two_star_pre: 6.3,
-    one_star_pre: 7.2
+    five_star_per: 38,
+    four_star_per: 21.9,
+    three_star_per: 26.6,
+    two_star_per: 6.3,
+    one_star_per: 7.2
   },
   comments: [],
   reviews: [],

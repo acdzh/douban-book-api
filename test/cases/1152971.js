@@ -76,11 +76,11 @@ const data = {
     count: 1572,
     info: '',
     value: 9.1,
-    five_star_pre: 63.1,
-    four_star_pre: 30,
-    three_star_pre: 6.6,
-    two_star_pre: 0.1,
-    one_star_pre: 0.2
+    five_star_per: 63.1,
+    four_star_per: 30,
+    three_star_per: 6.6,
+    two_star_per: 0.1,
+    one_star_per: 0.2
   },
   comments: [],
   reviews: [],
