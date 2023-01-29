@@ -42,31 +42,41 @@ router.get('/search', async (ctx) => {
   }
 });
 
-router.get('/book', async (ctx) => {
-  const { id = '', isbn = '', update } = ctx.query;
-  if (id === '' && isbn === '') {
-    ctx.status = 400;
+router.get('/subject/:id', async (ctx) => {
+  const id = ctx.params.id;
+  const { update } = ctx.query;
+  try {
+    const { info, is_cache } = await getBookInfoById(id, update === '1');
+    ctx.body = {
+      success: true,
+      data: info,
+      is_cache,
+    };
+  } catch (err) {
+    ctx.response.status = 500;
     ctx.body = {
       success: false,
-      message: 'id or isbn is required.',
+      message: err,
     };
-  } else {
-    try {
-      const { info, is_cache } = id === ''
-        ? await getBookInfoByIsbn(isbn, update === '1')
-        : await getBookInfoById(id, update === '1');
-      ctx.body = {
-        success: true,
-        data: info,
-        is_cache,
-      };
-    } catch (err) {
-      ctx.response.status = 500;
-      ctx.body = {
-        success: false,
-        message: err,
-      };
-    }
+  }
+});
+
+router.get('/isbn/:isbn', async (ctx) => {
+  const isbn = ctx.params.isbn;
+  const { update } = ctx.query;
+  try {
+    const { info, is_cache } = await getBookInfoByIsbn(isbn, update === '1');
+    ctx.body = {
+      success: true,
+      data: info,
+      is_cache,
+    };
+  } catch (err) {
+    ctx.response.status = 500;
+    ctx.body = {
+      success: false,
+      message: err,
+    };
   }
 });
 

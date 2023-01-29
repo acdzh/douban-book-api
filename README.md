@@ -129,8 +129,8 @@ npm start
 
 #### 请求地址  
 
-`{HOST}/book?id=<id>`  
-`{HOST}/book?isbn=<isbn>`
+`{HOST}/subject/<id>`  
+`{HOST}/isbn/<isbn>`
 
 #### 请求方式  
 
@@ -146,8 +146,8 @@ npm start
 
 #### 返回示例
 
-`{HOST}/book?id=27012117`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/book?id=27012117)  
-`{HOST}/book?isbn=9787208140400`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/book?isbn=9787208140400)
+`{HOST}/subject/27012117`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/subject/27012117)  
+`{HOST}/isbn/9787208140400`: [DEMO](https://acdzh-douban-book-api.herokuapp.com/isbn/9787208140400)
 
 ```json
 {

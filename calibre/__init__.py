@@ -102,12 +102,12 @@ class DoubanBookSearcher:
     return None
 
   def get_book_by_douban_id(self, douban_id, log):
-    url = urljoin(self.api_host, f'/book?id=/{douban_id}')
+    url = urljoin(self.api_host, f'/subject/{douban_id}')
     data = self.request(url, log)
     return data
 
   def get_book_by_isbn(self, isbn, log):
-    url = urljoin(self.api_host, f'/book?isbn=/{isbn}')
+    url = urljoin(self.api_host, f'/isbn/{isbn}')
     data = self.request(url, log)
     return data
 
