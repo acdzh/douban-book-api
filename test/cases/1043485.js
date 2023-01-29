@@ -51,11 +51,11 @@ const data = {
     count: 21692,
     info: '',
     value: 8.3,
-    five_star_pre: 40.4,
-    four_star_pre: 44.9,
-    three_star_pre: 13.2,
-    two_star_pre: 1.1,
-    one_star_pre: 0.3
+    five_star_per: 40.4,
+    four_star_per: 44.9,
+    three_star_per: 13.2,
+    two_star_per: 1.1,
+    one_star_per: 0.3
   },
   comments: [],
   reviews: [],

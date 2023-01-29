@@ -178,11 +178,11 @@ npm start
       "count": 176,
       "info": "",
       "value": 8.7,
-      "five_star_pre": 53.4,
-      "four_star_pre": 33,
-      "three_star_pre": 8,
-      "two_star_pre": 2.8,
-      "one_star_pre": 2.8
+      "five_star_per": 53.4,
+      "four_star_per": 33,
+      "three_star_per": 8,
+      "two_star_per": 2.8,
+      "one_star_per": 2.8
     },
     "comments": [{
       "vote": 1,
@@ -245,11 +245,11 @@ npm start
 || count          || 评分人数   | number   | 176                                                             ||
 || info           || 评分信息   | "" \     | "目前无人评价" \                                                      | "评价人数不足"                                                           |""|当评分不足时, 此项不为空|
 || value          || 分数     | number   | 8.7                                                             ||
-|| five_star_pre  || 五星占比   | number   | 53.4                                                            | 百分数                                                                |
-|| four_star_pre  || 四星占比   | number   | 33                                                              | 百分数                                                                |
-|| three_star_pre || 三星占比   | number   | 8                                                               | 百分数                                                                |
-|| two_star_pre   || 二星占比   | number   | 2.8                                                             | 百分数                                                                |
-|| one_star_pre   || 一行占比   | number   | 2.8                                                             | 百分数                                                                |
+|| five_star_per  || 五星占比   | number   | 53.4                                                            | 百分数                                                                |
+|| four_star_per  || 四星占比   | number   | 33                                                              | 百分数                                                                |
+|| three_star_per || 三星占比   | number   | 8                                                               | 百分数                                                                |
+|| two_star_per   || 二星占比   | number   | 2.8                                                             | 百分数                                                                |
+|| one_star_per   || 一行占比   | number   | 2.8                                                             | 百分数                                                                |
 | comments       ||| 短评     | object[] || 该项为数组, 包括最新短评与热门短评, 短评有字数限制                                     |
 || vote           || 有用数    | number   | 1                                                               ||
 || user_name      || 用户昵称   | string   | "乔治 ♘"                                                          ||

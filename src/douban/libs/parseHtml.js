@@ -98,11 +98,11 @@ function getRating($) {
     count: 0,
     info: '',
     value: 0,
-    five_star_pre: 0,
-    four_star_pre: 0,
-    three_star_pre: 0,
-    two_star_pre: 0,
-    one_star_pre: 0,
+    five_star_per: 0,
+    four_star_per: 0,
+    three_star_per: 0,
+    two_star_per: 0,
+    one_star_per: 0,
   };
   const cheerioDivRatingSumEleSpanEle = $('div.rating_sum>span');
   if (cheerioDivRatingSumEleSpanEle.length === 0) return rating; // 评分被和谐
@@ -119,11 +119,11 @@ function getRating($) {
   rating.count = parseInt(divRatingSumEleSpanEle.children[1].children[0].children[0].data);
   rating.value = parseFloat($('strong.ll.rating_num')[0].children[0].data.remove(' '));
   [
-    rating.five_star_pre,
-    rating.four_star_pre,
-    rating.three_star_pre,
-    rating.two_star_pre,
-    rating.one_star_pre
+    rating.five_star_per,
+    rating.four_star_per,
+    rating.three_star_per,
+    rating.two_star_per,
+    rating.one_star_per
   ] = [...$('span.rating_per')].map(spanEle => parseFloat(spanEle.children[0].data.slice(0, -1)));
   return rating;
 }

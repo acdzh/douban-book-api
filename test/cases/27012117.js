@@ -32,11 +32,11 @@ const data = {
     count: 282,
     info: '',
     value: 8.6,
-    five_star_pre: 57.4,
-    four_star_pre: 28,
-    three_star_pre: 9.6,
-    two_star_pre: 2.1,
-    one_star_pre: 2.8
+    five_star_per: 57.4,
+    four_star_per: 28,
+    three_star_per: 9.6,
+    two_star_per: 2.1,
+    one_star_per: 2.8
   },
   comments: [],
   reviews: [],
